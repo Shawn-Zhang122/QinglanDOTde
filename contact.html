@@ -1,391 +1,628 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>联系 · 青蓝中文 — Kontakt</title>
-<meta name="description" content="申请免费试听，或通过邮件、微信联系青蓝中文。Probestunde anfragen — Chinesisch für Kinder in Berlin und Potsdam. Jetzt anfragen.">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="青蓝中文 · Qinglan Chinesisch">
-<meta property="og:title" content="联系与试听申请｜青蓝中文">
-<meta property="og:description" content="申请免费试听，或通过邮件、微信联系青蓝中文。Probestunde anfragen — Chinesisch für Kinder in Berlin und Potsdam. Jetzt anfragen.">
-<meta property="og:url" content="https://www.qinglan.de/contact.html">
-<meta property="og:image" content="https://www.qinglan.de/images/hero-bg.jpg">
-<meta property="og:locale" content="de_DE">
-<meta property="og:locale:alternate" content="zh_CN">
-<meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" type="image/png" href="images/favicon.png">
-<link rel="preload" href="fonts/NotoSerifSC-600.woff2" as="font" type="font/woff2" crossorigin>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>联系 · 青蓝中文 — Kontakt</title>
+  <meta name="description"
+    content="申请免费试听，或通过邮件、微信联系青蓝中文。Probestunde anfragen — Chinesisch für Kinder in Berlin und Potsdam. Jetzt anfragen.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="青蓝中文 · Qinglan Chinesisch">
+  <meta property="og:title" content="联系与试听申请｜青蓝中文">
+  <meta property="og:description"
+    content="申请免费试听，或通过邮件、微信联系青蓝中文。Probestunde anfragen — Chinesisch für Kinder in Berlin und Potsdam. Jetzt anfragen.">
+  <meta property="og:url" content="https://www.qinglan.de/contact.html">
+  <meta property="og:image" content="https://www.qinglan.de/images/hero-bg.jpg">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preload" href="fonts/NotoSerifSC-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/NotoSansSC-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
-<style>
-  #form{ scroll-margin-top:100px; }
-  .contact-grid{ display:grid; grid-template-columns:.4fr .6fr; gap:46px; align-items:start; }
-  .contact-side{ position:sticky; top:104px; }
-  .write-pane{ min-width:0; }
-  .info-card{
-    background:#fff; border:1px solid var(--line-soft); border-radius:var(--r);
-    box-shadow:var(--sh); padding:26px 28px;
-  }
+  <style>
+    #form {
+      scroll-margin-top: 100px;
+    }
 
-  .info-card{ background:#fff; border:1px solid var(--line-soft); border-radius:var(--r-lg); box-shadow:var(--sh); padding: 40px 44px; }
-  .info-row{
-    display:grid; grid-template-columns: 44px 1fr; gap: 18px;
-    padding: 22px 0; border-bottom: 1px solid var(--line); align-items:start;
-  }
-  .info-row:first-child{ padding-top: 0; }
-  .info-row:last-child{ border-bottom: none; padding-bottom: 0; }
-  .info-row .ic{ color: var(--qing); padding-top: 2px; }
-  .info-row .k{
-    font-family:"Noto Serif SC",serif; font-size: 13px;
-    letter-spacing:.06em; color: var(--muted);
-    margin-bottom: 5px;
-  }
-  .info-row .v{
-    font-size: 16.5px; color: var(--lan-deep); font-family:"Noto Serif SC",serif;
-    line-height: 1.5;
-  }
-  .info-row .v a{ text-decoration:none; }
-  .info-row .v a:hover{ color: var(--qing); }
-  .wxid em{
-    font-style:normal; font-size:11.5px; color:var(--qing-ink); margin-left:8px;
-  }
-  .wxid.copied em::after{ content:" ✓"; }
-  .qr-row .lat{
-    display:block; margin-top:5px; font-family:"Newsreader",serif; font-size:12.5px;
-  }
-  .info-row .v .small i{ display:block; font-style:normal; margin-top:3px; font-family:"Newsreader",serif; }
-  .info-row .v .wx-id{
-    font-family:"Newsreader",serif; font-size:16.5px; color:var(--lan-deep);
-    letter-spacing:.04em; font-weight:500;
-  }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .4fr .6fr;
+      gap: 46px;
+      align-items: start;
+    }
 
-  /* 表单：中德双行标签 */
-  .form-intro{
-    margin:0 0 26px; font-size:15px; line-height:1.9; color:#3c4249;
-  }
-  .form-row label i{
-    font-family:"Newsreader",serif; font-style:normal; font-weight:400;
-    font-size:11.5px; letter-spacing:.06em; color:var(--muted);
-    margin-left:8px; text-transform:none;
-  }
+    .contact-side {
+      position: sticky;
+      top: 104px;
+    }
 
-  /* 提交成功 */
-  .form-done{
-    text-align:center; padding:44px 30px;
-    background:var(--paper-leaf); border-radius:var(--r); border:1px solid var(--line-soft);
-  }
-  .form-done .done-ic{ display:block; width:44px; height:44px; margin:0 auto 18px; color:var(--qing); }
-  .form-done .done-ic svg{ width:100%; height:100%; }
-  .form-done p{
-    margin:0 0 8px; font-size:16.5px; line-height:1.85; color:var(--lan-deep);
-    font-family:"Noto Serif SC",serif;
-  }
-  .form-done p[lang="de"]{
-    font-family:"Newsreader",serif; font-size:14px; color:var(--muted); margin:0;
-  }
+    .write-pane {
+      min-width: 0;
+    }
 
-  /* 写信表单 */
-  .write-pane h2{
-    font-size: var(--fs-sec); color: var(--lan-deep); margin: 0 0 12px;
-  }
-  .write-pane h2 .en{
-    display:block; font-family:"Newsreader",serif; font-size:14px;
-    letter-spacing:.09em; font-variant:small-caps; color: var(--qing);
-    font-weight:500; margin-top: 6px; font-style:italic;
-  }
-  .write-pane p{ font-size: 16.5px; color: #2b2f36; margin: 0 0 28px; }
+    .info-card {
+      background: #fff;
+      border: 1px solid var(--line-soft);
+      border-radius: var(--r);
+      box-shadow: var(--sh);
+      padding: 26px 28px;
+    }
 
-  .form-row{ margin-bottom:18px; min-width:0; }
-  .form-grid-2 > *{ min-width:0; }
-  .form-row label:not(.rd){
-    display:block; font-family:"Noto Serif SC",serif;
-    font-size:13px; letter-spacing:.02em; text-transform:none;
-    color:var(--lan-deep); margin-bottom:7px;
-  }
-  .form-row input:not([type=radio]):not([type=checkbox]), .form-row select, .form-row textarea{
-    width:100%; min-width:0; max-width:100%; box-sizing:border-box; padding: 12px 15px; font-family: inherit; font-size: 14px; border-radius:var(--r-sm);
-    background:#fff; border:1px solid var(--line); color: var(--ink);
-    transition: border-color .25s;
-  }
-  .form-row select{ font-size:13px; padding-right:38px; }
-  .form-row select option{ font-size:13px; }
-  .form-row input:focus, .form-row select:focus, .form-row textarea:focus{
-    outline:none; border-color: var(--qing);
-  }
-  .form-row textarea{ min-height: 130px; resize:vertical; line-height:1.5; }
-  .form-grid-2{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .info-card {
+      background: #fff;
+      border: 1px solid var(--line-soft);
+      border-radius: var(--r-lg);
+      box-shadow: var(--sh);
+      padding: 40px 44px;
+    }
 
-  .form-row label em, .form-row label > em{ color:var(--seal); font-style:normal; margin-left:2px; }
-  .form-row input:invalid:not(:placeholder-shown){ border-color:var(--seal); }
+    .info-row {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 18px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+      align-items: start;
+    }
 
-  /* DSGVO 同意勾选 */
-  .form-consent{
-    display:grid; grid-template-columns:20px 1fr; gap:12px; align-items:start;
-    margin-top:22px; padding:16px 18px; border-radius:var(--r-sm);
-    background:var(--paper-warm); border-left:3px solid var(--qing);
-  }
-  .form-consent input{ width:18px; height:18px; margin-top:3px; accent-color:var(--qing-deep); }
-  .form-consent label i{ display:block; font-style:normal; margin-top:5px; font-family:"Newsreader",serif; font-size:11.5px; }
-  .form-consent label{
-    font-size:13px; line-height:1.65; color:#3c4249;
-    font-family:"Noto Sans SC",sans-serif; letter-spacing:0; text-transform:none;
-  }
-  .form-consent label span{ display:block; margin-top:5px; color:var(--muted); }
-  .form-consent a{ color:var(--qing-ink); }
+    .info-row:first-child {
+      padding-top: 0;
+    }
 
-  @media (max-width: 900px){
-    .contact-grid{ grid-template-columns:1fr; gap:36px; }
-    .contact-side{ position:static; }
-    .form-grid-2{ grid-template-columns: 1fr; }
-    .info-card{ padding: 28px; }
-  }
-</style>
-<script>document.documentElement.classList.add('js');</script>
+    .info-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .info-row .ic {
+      color: var(--qing);
+      padding-top: 2px;
+    }
+
+    .info-row .k {
+      font-family: "Noto Serif SC", serif;
+      font-size: 13px;
+      letter-spacing: .06em;
+      color: var(--muted);
+      margin-bottom: 5px;
+    }
+
+    .info-row .v {
+      font-size: 16.5px;
+      color: var(--lan-deep);
+      font-family: "Noto Serif SC", serif;
+      line-height: 1.5;
+    }
+
+    .info-row .v a {
+      text-decoration: none;
+    }
+
+    .info-row .v a:hover {
+      color: var(--qing);
+    }
+
+    .wxid em {
+      font-style: normal;
+      font-size: 11.5px;
+      color: var(--qing-ink);
+      margin-left: 8px;
+    }
+
+    .wxid.copied em::after {
+      content: " ✓";
+    }
+
+    .qr-row .lat {
+      display: block;
+      margin-top: 5px;
+      font-family: "Newsreader", serif;
+      font-size: 12.5px;
+    }
+
+    .info-row .v .small i {
+      display: block;
+      font-style: normal;
+      margin-top: 3px;
+      font-family: "Newsreader", serif;
+    }
+
+    .info-row .v .wx-id {
+      font-family: "Newsreader", serif;
+      font-size: 16.5px;
+      color: var(--lan-deep);
+      letter-spacing: .04em;
+      font-weight: 500;
+    }
+
+    /* 表单：中德双行标签 */
+    .form-intro {
+      margin: 0 0 26px;
+      font-size: 15px;
+      line-height: 1.9;
+      color: #3c4249;
+    }
+
+    .form-row label i {
+      font-family: "Newsreader", serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 11.5px;
+      letter-spacing: .06em;
+      color: var(--muted);
+      margin-left: 8px;
+      text-transform: none;
+    }
+
+    /* 提交成功 */
+    .form-done {
+      text-align: center;
+      padding: 44px 30px;
+      background: var(--paper-leaf);
+      border-radius: var(--r);
+      border: 1px solid var(--line-soft);
+    }
+
+    .form-done .done-ic {
+      display: block;
+      width: 44px;
+      height: 44px;
+      margin: 0 auto 18px;
+      color: var(--qing);
+    }
+
+    .form-done .done-ic svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .form-done p {
+      margin: 0 0 8px;
+      font-size: 16.5px;
+      line-height: 1.85;
+      color: var(--lan-deep);
+      font-family: "Noto Serif SC", serif;
+    }
+
+    .form-done p[lang="de"] {
+      font-family: "Newsreader", serif;
+      font-size: 14px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* 写信表单 */
+    .write-pane h2 {
+      font-size: var(--fs-sec);
+      color: var(--lan-deep);
+      margin: 0 0 12px;
+    }
+
+    .write-pane h2 .en {
+      display: block;
+      font-family: "Newsreader", serif;
+      font-size: 14px;
+      letter-spacing: .09em;
+      font-variant: small-caps;
+      color: var(--qing);
+      font-weight: 500;
+      margin-top: 6px;
+      font-style: italic;
+    }
+
+    .write-pane p {
+      font-size: 16.5px;
+      color: #2b2f36;
+      margin: 0 0 28px;
+    }
+
+    .form-row {
+      margin-bottom: 18px;
+      min-width: 0;
+    }
+
+    .form-grid-2>* {
+      min-width: 0;
+    }
+
+    .form-row label:not(.rd) {
+      display: block;
+      font-family: "Noto Serif SC", serif;
+      font-size: 13px;
+      letter-spacing: .02em;
+      text-transform: none;
+      color: var(--lan-deep);
+      margin-bottom: 7px;
+    }
+
+    .form-row input:not([type=radio]):not([type=checkbox]),
+    .form-row select,
+    .form-row textarea {
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+      box-sizing: border-box;
+      padding: 12px 15px;
+      font-family: inherit;
+      font-size: 14px;
+      border-radius: var(--r-sm);
+      background: #fff;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      transition: border-color .25s;
+    }
+
+    .form-row select {
+      font-size: 13px;
+      padding-right: 38px;
+    }
+
+    .form-row select option {
+      font-size: 13px;
+    }
+
+    .form-row input:focus,
+    .form-row select:focus,
+    .form-row textarea:focus {
+      outline: none;
+      border-color: var(--qing);
+    }
+
+    .form-row textarea {
+      min-height: 130px;
+      resize: vertical;
+      line-height: 1.5;
+    }
+
+    .form-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-row label em,
+    .form-row label>em {
+      color: var(--seal);
+      font-style: normal;
+      margin-left: 2px;
+    }
+
+    .form-row input:invalid:not(:placeholder-shown) {
+      border-color: var(--seal);
+    }
+
+    /* DSGVO 同意勾选 */
+    .form-consent {
+      display: grid;
+      grid-template-columns: 20px 1fr;
+      gap: 12px;
+      align-items: start;
+      margin-top: 22px;
+      padding: 16px 18px;
+      border-radius: var(--r-sm);
+      background: var(--paper-warm);
+      border-left: 3px solid var(--qing);
+    }
+
+    .form-consent input {
+      width: 18px;
+      height: 18px;
+      margin-top: 3px;
+      accent-color: var(--qing-deep);
+    }
+
+    .form-consent label i {
+      display: block;
+      font-style: normal;
+      margin-top: 5px;
+      font-family: "Newsreader", serif;
+      font-size: 11.5px;
+    }
+
+    .form-consent label {
+      font-size: 13px;
+      line-height: 1.65;
+      color: #3c4249;
+      font-family: "Noto Sans SC", sans-serif;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .form-consent label span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+    }
+
+    .form-consent a {
+      color: var(--qing-ink);
+    }
+
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .contact-side {
+        position: static;
+      }
+
+      .form-grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .info-card {
+        padding: 28px;
+      }
+    }
+  </style>
+  <script>document.documentElement.classList.add('js');</script>
 </head>
-<body class="single">
-<a class="skip" href="#main">跳到主内容 · Zum Inhalt springen</a>
 
-<header>
-  <div class="wrap nav-inner">
-    <a href="index.html" class="brand">
-      <img src="images/logo.png" alt="" class="brand-img" width="40" height="40">
-      <span class="brand-text">
-        <span class="cn" lang="zh-Hans">青蓝中文</span>
-        <span class="en">Qinglan Chinesisch</span>
-      </span>
-    </a>
-    <nav class="links" aria-label="Hauptnavigation">
+<body class="single">
+  <a class="skip" href="#main">跳到主内容 · Zum Inhalt springen</a>
+
+  <header>
+    <div class="wrap nav-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="" class="brand-img" width="40" height="40">
+        <span class="brand-text">
+          <span class="cn" lang="zh-Hans">青蓝中文</span>
+          <span class="en">Qinglan Chinesisch</span>
+        </span>
+      </a>
+      <nav class="links" aria-label="Hauptnavigation">
+        <a href="about.html"><span lang="zh-Hans">关于我</span><span class="de">Über mich</span></a>
+        <a href="philosophy.html"><span lang="zh-Hans">理念</span><span class="de">Ansatz</span></a>
+        <a href="courses.html"><span lang="zh-Hans">课程</span><span class="de">Kurse</span></a>
+        <a href="contact.html" class="current"><span lang="zh-Hans">联系</span><span class="de">Kontakt</span></a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav"
+        aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobil">
       <a href="about.html"><span lang="zh-Hans">关于我</span><span class="de">Über mich</span></a>
       <a href="philosophy.html"><span lang="zh-Hans">理念</span><span class="de">Ansatz</span></a>
       <a href="courses.html"><span lang="zh-Hans">课程</span><span class="de">Kurse</span></a>
-      <a href="contact.html" class="current"><span lang="zh-Hans">联系</span><span class="de">Kontakt</span></a>
+      <a href="contact.html" aria-current="page"><span lang="zh-Hans">联系</span><span class="de">Kontakt</span></a>
     </nav>
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Menü öffnen">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobil">
-    <a href="about.html"><span lang="zh-Hans">关于我</span><span class="de">Über mich</span></a>
-    <a href="philosophy.html"><span lang="zh-Hans">理念</span><span class="de">Ansatz</span></a>
-    <a href="courses.html"><span lang="zh-Hans">课程</span><span class="de">Kurse</span></a>
-    <a href="contact.html" aria-current="page"><span lang="zh-Hans">联系</span><span class="de">Kontakt</span></a>
-  </nav>
-</header>
+  </header>
 
-<main id="main">
+  <main id="main">
 
-<div class="page-head">
-  <div class="wrap">
-    <h1>联系 <span class="sep">·</span> Kontakt</h1>
-  </div>
-</div>
-
-<section>
-  <div class="wrap">
-
-    <div class="contact-grid">
-      <!-- 左：联系方式（滚动时跟随） -->
-      <aside class="contact-side">
-        <div class="info-card">
-
-          <div class="info-row">
-            <span class="ic">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                <rect x="3" y="5" width="18" height="14" rx="2"/>
-                <path d="M3 7l9 6 9-6"/>
-              </svg>
-            </span>
-            <div>
-              <div class="k"><span lang="zh-Hans">电子邮件</span> · E-Mail</div>
-              <div class="v">
-                <a href="mailto:qinglankids@gmail.com">qinglankids@gmail.com</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="info-row">
-            <span class="ic">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9 3C5.1 3 2 5.7 2 9c0 1.9 1 3.5 2.6 4.6L4 16l2.6-1.4c.8.2 1.6.4 2.4.4h.5"/>
-                <path d="M15.5 8C18.5 8 21 10.2 21 12.9c0 1.5-.8 2.9-2.1 3.8l.5 2-2.2-1.1c-.6.2-1.3.3-1.7.3-3 0-5.5-2.2-5.5-4.9S12.5 8 15.5 8z"/>
-              </svg>
-            </span>
-            <div>
-              <div class="k"><span lang="zh-Hans">微信</span> · WeChat</div>
-              <div class="v">
-                <span lang="zh-Hans">搜索微信号 <b class="wx-id">QinglanCH</b> 添加</span>
-              </div>
-            </div>
-          </div>
-
-
-
-
-        </div>
-      </aside>
-
-      <!-- 右：申请试听表单 -->
-      <div class="write-pane" id="form">
-        <h2 lang="zh-Hans">申请试听 <span class="en">Probestunde anfragen</span></h2>
-        <p class="form-intro" lang="zh-Hans">
-          想了解课程或申请试听？欢迎留言。
-        </p>
-
-        <!-- ⚠ 上线前必做：把 action 换成表单服务地址（Formspree / Web3Forms），否则填了发不出去 -->
-        <form id="anfrage" action="senden.php" method="POST" novalidate>
-          <input aria-label="Bitte leer lassen" aria-hidden="true" type="text" name="_gotcha" tabindex="-1" autocomplete="off"
-                 style="position:absolute; left:-9999px;" aria-hidden="true">
-          <input type="hidden" name="_subject" value="Anfrage über qinglan.de">
-
-          <div class="form-grid-2">
-            <div class="form-row">
-              <label for="kind"><span lang="zh-Hans">孩子姓名</span><i>Name des Kindes</i> <em>*</em></label>
-              <input type="text" id="kind" name="Kind" required autocomplete="name">
-            </div>
-            <div class="form-row">
-              <label for="alter"><span lang="zh-Hans">孩子年龄 / 学校年级</span><i>Alter / Klassenstufe</i></label>
-              <input type="text" id="alter" name="Alter" placeholder="例如：7 岁 / 一年级" autocomplete="off">
-            </div>
-          </div>
-
-          <div class="form-row">
-            <label for="mail"><span lang="zh-Hans">您的邮箱</span><i>E-Mail</i> <em>*</em></label>
-            <input type="email" id="mail" name="email" required placeholder="ihre@email.de" autocomplete="email">
-          </div>
-
-          <div class="form-grid-2">
-          <div class="form-row">
-            <label for="kurs"><span lang="zh-Hans">感兴趣的课程</span><i>Interessierter Kurs</i></label>
-            <select id="kurs" name="Kurs">
-              <option value="">— 请选择 · Bitte wählen —</option>
-              <option>一上 · Sa · Berlin</option>
-              <option>一下 · Sa · Berlin</option>
-              <option>一下 · So · Potsdam</option>
-              <option>二下 · So · Potsdam</option>
-              <option>其他 / 不确定 · Andere</option>
-            </select>
-          </div>
-
-          <div class="form-row">
-            <label for="wort"><span lang="zh-Hans">孩子目前的识字量</span><i>Wortschatz</i></label>
-            <select id="wort" name="Wortschatz">
-              <option value="">— 请选择 · Bitte wählen —</option>
-              <option>0 – 100 字</option>
-              <option>100 – 500 字</option>
-              <option>500 – 1 000 字</option>
-              <option>1 000 – 1 500 字</option>
-              <option>1 500 – 2 000 字</option>
-              <option>2 000 字以上</option>
-              <option>不确定 · Nicht sicher</option>
-            </select>
-          </div>
-          </div>
-
-          <div class="form-row">
-            <label for="msg"><span lang="zh-Hans">留言</span><i>Nachricht</i></label>
-            <textarea id="msg" name="Nachricht" placeholder="例如：申请试听、课程咨询、正式报名，或其他想了解的问题。" autocomplete="off"></textarea>
-          </div>
-
-          <div class="form-consent">
-            <input type="checkbox" id="ok" name="Einwilligung" required value="ja">
-            <label for="ok">
-                <span lang="zh-Hans">同意为处理本次咨询保存以上信息，详见<a href="datenschutz.html">隐私声明</a>。</span>
-                <i lang="de">Ich stimme zu, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert werden.
-                Weitere Informationen in der <a href="datenschutz.html">Datenschutzerklärung</a>.</i>
-              </label>
-          </div>
-
-          <button type="submit" class="btn btn-primary" style="margin-top:20px;">
-            <span lang="zh-Hans">提交</span> · Absenden <span class="arr" aria-hidden="true">→</span>
-          </button>
-        </form>
-
-        <div class="form-done" id="formDone" hidden>
-          <span class="done-ic" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="9.5"/><path d="M8 12.4l2.6 2.6L16 9.6"/>
-            </svg>
-          </span>
-          <p lang="zh-Hans">谢谢您的留言！我会尽快与您联系。</p>
-          <p lang="de">Vielen Dank für Ihre Nachricht! Ich melde mich so bald wie möglich bei Ihnen.</p>
-        </div>
+    <div class="page-head">
+      <div class="wrap">
+        <h1>联系 <span class="sep">·</span> Kontakt</h1>
       </div>
     </div>
 
-  </div>
-</section>
+    <section>
+      <div class="wrap">
 
-</main>
+        <div class="contact-grid">
+          <!-- 左：联系方式（滚动时跟随） -->
+          <aside class="contact-side">
+            <div class="info-card">
 
-<footer>
-  <div class="wrap">
-    <nav class="foot-line" aria-label="Fußzeile">
-      <a href="about.html"><span lang="zh-Hans">关于我</span> · Über mich</a>
-      <a href="philosophy.html"><span lang="zh-Hans">教学理念</span> · Ansatz</a>
-      <a href="courses.html"><span lang="zh-Hans">课程设置</span> · Kurse</a>
-      <a href="contact.html"><span lang="zh-Hans">联系</span> · Kontakt</a>
-      <a href="mailto:qinglankids@gmail.com">qinglankids@gmail.com</a>
-    </nav>
-    <div class="foot-bottom">
-      <div>© 2026 青蓝中文 · QINGLAN CHINESISCH · Berlin · Potsdam</div>
-      <div><a href="impressum.html">法律信息 Impressum</a> <a href="datenschutz.html">隐私声明 Datenschutz</a></div>
+              <div class="info-row">
+                <span class="ic">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                    <path d="M3 7l9 6 9-6" />
+                  </svg>
+                </span>
+                <div>
+                  <div class="k"><span lang="zh-Hans">电子邮件</span> · E-Mail</div>
+                  <div class="v">
+                    <a href="mailto:qinglankids@gmail.com">qinglankids@gmail.com</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="info-row">
+                <span class="ic">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 3C5.1 3 2 5.7 2 9c0 1.9 1 3.5 2.6 4.6L4 16l2.6-1.4c.8.2 1.6.4 2.4.4h.5" />
+                    <path
+                      d="M15.5 8C18.5 8 21 10.2 21 12.9c0 1.5-.8 2.9-2.1 3.8l.5 2-2.2-1.1c-.6.2-1.3.3-1.7.3-3 0-5.5-2.2-5.5-4.9S12.5 8 15.5 8z" />
+                  </svg>
+                </span>
+                <div>
+                  <div class="k"><span lang="zh-Hans">微信</span> · WeChat</div>
+                  <div class="v">
+                    <span lang="zh-Hans">搜索微信号 <b class="wx-id">QinglanCH</b> 添加</span>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+            </div>
+          </aside>
+
+          <!-- 右：申请试听表单 -->
+          <div class="write-pane" id="form">
+            <h2 lang="zh-Hans">申请试听 <span class="en">Probestunde anfragen</span></h2>
+            <p class="form-intro" lang="zh-Hans">
+              想了解课程或申请试听？欢迎留言。
+            </p>
+
+            <!-- ⚠ 上线前必做：把 action 换成表单服务地址（Formspree / Web3Forms） -->
+            <form id="anfrage" action="https://api.web3forms.com/submit" method="POST" novalidate>
+              <input type="hidden" name="access_key" value="d11a6c20-90d5-4b24-be66-c4dac453a350">
+              <input type="hidden" name="subject" value="试听申请 · Probestunde — qinglan.de">
+              <input type="hidden" name="from_name" value="青蓝中文网站表单">
+              <input type="hidden" name="redirect" value="false">
+              <input aria-label="Bitte leer lassen" aria-hidden="true" type="text" name="_gotcha" tabindex="-1"
+                autocomplete="off" style="position:absolute; left:-9999px;" aria-hidden="true">
+
+              <div class="form-grid-2">
+                <div class="form-row">
+                  <label for="kind"><span lang="zh-Hans">孩子姓名</span><i>Name des Kindes</i> <em>*</em></label>
+                  <input type="text" id="kind" name="Kind" required autocomplete="name">
+                </div>
+                <div class="form-row">
+                  <label for="alter"><span lang="zh-Hans">孩子年龄 / 学校年级</span><i>Alter / Klassenstufe</i></label>
+                  <input type="text" id="alter" name="Alter" placeholder="例如：7 岁 / 一年级" autocomplete="off">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label for="mail"><span lang="zh-Hans">您的邮箱</span><i>E-Mail</i> <em>*</em></label>
+                <input type="email" id="mail" name="email" required placeholder="ihre@email.de" autocomplete="email">
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-row">
+                  <label for="kurs"><span lang="zh-Hans">感兴趣的课程</span><i>Interessierter Kurs</i></label>
+                  <select id="kurs" name="Kurs">
+                    <option value="">— 请选择 · Bitte wählen —</option>
+                    <option>一上 · Sa · Berlin</option>
+                    <option>一下 · Sa · Berlin</option>
+                    <option>一下 · So · Potsdam</option>
+                    <option>二下 · So · Potsdam</option>
+                    <option>其他 / 不确定 · Andere</option>
+                  </select>
+                </div>
+
+                <div class="form-row">
+                  <label for="wort"><span lang="zh-Hans">孩子目前的识字量</span><i>Wortschatz</i></label>
+                  <select id="wort" name="Wortschatz">
+                    <option value="">— 请选择 · Bitte wählen —</option>
+                    <option>0 – 100 字</option>
+                    <option>100 – 500 字</option>
+                    <option>500 – 1 000 字</option>
+                    <option>1 000 – 1 500 字</option>
+                    <option>1 500 – 2 000 字</option>
+                    <option>2 000 字以上</option>
+                    <option>不确定 · Nicht sicher</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label for="msg"><span lang="zh-Hans">留言</span><i>Nachricht</i></label>
+                <textarea id="msg" name="Nachricht" placeholder="例如：申请试听、课程咨询、正式报名，或其他想了解的问题。"
+                  autocomplete="off"></textarea>
+              </div>
+
+              <div class="form-consent">
+                <input type="checkbox" id="ok" name="Einwilligung" required value="ja">
+                <label for="ok">
+                  <span lang="zh-Hans">同意为处理本次咨询保存以上信息，详见<a href="datenschutz.html">隐私声明</a>。</span>
+                  <i lang="de">Ich stimme zu, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert werden.
+                    Weitere Informationen in der <a href="datenschutz.html">Datenschutzerklärung</a>.</i>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="margin-top:20px;">
+                <span lang="zh-Hans">提交</span> · Absenden <span class="arr" aria-hidden="true">→</span>
+              </button>
+            </form>
+
+            <div class="form-done" id="formDone" hidden>
+              <span class="done-ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9.5" />
+                  <path d="M8 12.4l2.6 2.6L16 9.6" />
+                </svg>
+              </span>
+              <p lang="zh-Hans">谢谢您的留言！我会尽快与您联系。</p>
+              <p lang="de">Vielen Dank für Ihre Nachricht! Ich melde mich so bald wie möglich bei Ihnen.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <nav class="foot-line" aria-label="Fußzeile">
+        <a href="about.html"><span lang="zh-Hans">关于我</span> · Über mich</a>
+        <a href="philosophy.html"><span lang="zh-Hans">教学理念</span> · Ansatz</a>
+        <a href="courses.html"><span lang="zh-Hans">课程设置</span> · Kurse</a>
+        <a href="contact.html"><span lang="zh-Hans">联系</span> · Kontakt</a>
+        <a href="mailto:qinglankids@gmail.com">qinglankids@gmail.com</a>
+      </nav>
+      <div class="foot-bottom">
+        <div>© 2026 青蓝中文 · QINGLAN CHINESISCH · Berlin · Potsdam</div>
+        <div><a href="impressum.html">法律信息 Impressum</a> <a href="datenschutz.html">隐私声明 Datenschutz</a></div>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<script>
+  <script>
 
-  const tgl = document.getElementById('navToggle');
-  const mnav = document.getElementById('mobileNav');
-  tgl.addEventListener('click', ()=>{
-    const open = mnav.classList.toggle('open');
-    tgl.setAttribute('aria-expanded', String(open));
-    tgl.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
-  });
-  const wx = document.getElementById('wxid');
-  if(wx) wx.addEventListener('click', ()=>{
-    const id = wx.dataset.id;
-    navigator.clipboard?.writeText(id).then(()=>{
-      wx.classList.add('copied');
-      wx.querySelector('em').textContent = '已复制';
-      setTimeout(()=>{ wx.classList.remove('copied'); wx.querySelector('em').textContent='点击复制'; }, 2000);
+    const tgl = document.getElementById('navToggle');
+    const mnav = document.getElementById('mobileNav');
+    tgl.addEventListener('click', () => {
+      const open = mnav.classList.toggle('open');
+      tgl.setAttribute('aria-expanded', String(open));
+      tgl.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
     });
-  });
+    const wx = document.getElementById('wxid');
+    if (wx) wx.addEventListener('click', () => {
+      const id = wx.dataset.id;
+      navigator.clipboard?.writeText(id).then(() => {
+        wx.classList.add('copied');
+        wx.querySelector('em').textContent = '已复制';
+        setTimeout(() => { wx.classList.remove('copied'); wx.querySelector('em').textContent = '点击复制'; }, 2000);
+      });
+    });
 
-  document.addEventListener('keydown', e=>{
-    if(e.key === 'Escape' && mnav.classList.contains('open')){ tgl.click(); tgl.focus(); }
-  });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && mnav.classList.contains('open')) { tgl.click(); tgl.focus(); }
+    });
 
 
-  // 表单提交：成功后显示感谢信息（endpoint 未填时提示）
-  (function(){
-    var f = document.getElementById('anfrage'), done = document.getElementById('formDone');
-    if(!f || !done) return;
-    f.addEventListener('submit', function(e){
-      if(!f.checkValidity()){ f.reportValidity(); e.preventDefault(); return; }
-      var url = f.getAttribute('action') || '';
-      if(!url || url.indexOf('〔') === 0){
+    // 表单提交 → Web3Forms → 邮件发到 qinglankids@gmail.com
+    (function () {
+      var f = document.getElementById('anfrage'), done = document.getElementById('formDone');
+      if (!f || !done) return;
+
+      f.addEventListener('submit', function (e) {
         e.preventDefault();
-        alert('表单尚未连接发送服务。');
-        return;
-      }
-      e.preventDefault();
-      var btn = f.querySelector('button[type=submit]');
-      if(btn){ btn.disabled = true; btn.style.opacity = '.6'; }
-      fetch(url, { method:'POST', body:new FormData(f), headers:{'Accept':'application/json'} })
-        .then(function(r){
-          if(!r.ok) throw new Error('send failed');
-          f.hidden = true; done.hidden = false;
-          done.scrollIntoView({ behavior:'smooth', block:'center' });
+        if (!f.checkValidity()) { f.reportValidity(); return; }
+
+        var btn = f.querySelector('button[type=submit]');
+        var key = f.querySelector('[name=access_key]');
+        if (key && key.value.indexOf('ACCESS-KEY') > -1) {
+          alert('表单尚未配置 Access Key。');
+          return;
+        }
+
+        if (btn) { btn.disabled = true; btn.style.opacity = '.6'; }
+
+        fetch(f.action, {
+          method: 'POST',
+          body: new FormData(f),
+          headers: { 'Accept': 'application/json' }
         })
-        .catch(function(){
-          if(btn){ btn.disabled = false; btn.style.opacity = '1'; }
-          alert('发送失败，请稍后重试，或直接写邮件到 qinglankids@gmail.com');
-        });
-    });
-  })();
-</script>
+          .then(function (r) { return r.json(); })
+          .then(function (j) {
+            if (!j.success) throw new Error(j.message || 'failed');
+            f.hidden = true; done.hidden = false;
+            done.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          })
+          .catch(function () {
+            if (btn) { btn.disabled = false; btn.style.opacity = '1'; }
+            alert('发送失败，请稍后重试，或直接写邮件到 qinglankids@gmail.com');
+          });
+      });
+    })();
+  </script>
 </body>
+
 </html>
