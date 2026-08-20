@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>关于我 · 青蓝中文 — Über mich</title>
+<meta name="description" content="乔琼 Joanna Qiao：北京师范大学教育管理学硕士，高级中学教师资格，多年海外儿童中文教学经验。Chinesischlehrerin in Berlin und Potsdam.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="青蓝中文 · Qinglan Chinesisch">
+<meta property="og:title" content="乔琼 Joanna Qiao｜青蓝中文任课教师">
+<meta property="og:description" content="乔琼 Joanna Qiao：北京师范大学教育管理学硕士，高级中学教师资格，多年海外儿童中文教学经验。Chinesischlehrerin in Berlin und Potsdam.">
+<meta property="og:url" content="https://www.qinglan.de/about.html">
+<meta property="og:image" content="https://www.qinglan.de/images/hero-bg.jpg">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preload" href="fonts/NotoSerifSC-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/NotoSansSC-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+<style>
+  /* 关于页特有 */
+  .name-rule{
+    display:block; width:52px; height:2px; margin:20px 0 32px;
+    background:linear-gradient(90deg, var(--mauve), var(--mauve-soft));
+  }
+  .bio-single{ max-width:700px; padding-top:8px; }
+  /* 第一段：资历信息，用青色 + 无衬线，比正文小一号 */
+  .bio-single > p.bio-cred[lang="zh-Hans"]{
+    font-family:"Noto Sans SC",sans-serif;
+    font-size:15px; line-height:1.95; color:var(--qing-ink);
+    text-indent:0; letter-spacing:.01em;
+    padding-left:16px; border-left:2px solid var(--qing-light);
+    margin-bottom:26px;
+  }
+  /* 中文段落首行缩进两字（em 单位随字号缩放，比空格可靠） */
+  .bio-single > p[lang="zh-Hans"]{
+    text-indent:2em; font-size:16.5px; line-height:2.05;
+    margin:0 0 20px; color:#3c4249; text-align:justify;
+    text-justify:inter-ideograph; hanging-punctuation:allow-end;
+  }
+  .bio-single > p[lang="zh-Hans"]:last-of-type{ margin-bottom:0; }
+  .bio-link{ text-indent:0; margin:26px 0 0; }
+  /* 与首页课程卡的「查看详情」完全一致，只提高特异性以压过 .bio-single > p 的正文样式 */
+  .bio-single .bio-link a.more{
+    display:inline-flex; align-items:center; gap:8px; margin-top:0;
+    font-family:"Noto Sans SC",sans-serif; font-size:14px; letter-spacing:.03em;
+    text-decoration:none; color:var(--qing-ink);
+    border-bottom:1px solid var(--line); padding-bottom:3px;
+    transition:color .3s, border-color .3s;
+  }
+  .bio-single .bio-link a.more:hover{ color:var(--qing-deep); border-color:var(--qing); }
+  .bio-single .bio-link a.more .arr{ transition:transform .3s; }
+  .bio-single .bio-link a.more:hover .arr{ transform:translateX(4px); }
+  .de-block{
+    margin-top:44px; padding-top:32px; border-top:1px solid var(--line-soft);
+    color:var(--muted);
+  }
+  .de-block h2.de-head{
+    margin:0 0 20px; font-family:"Newsreader",serif; font-weight:500;
+    font-size:18px; letter-spacing:.12em; font-variant:small-caps;
+    color:var(--lan-deep); font-weight:600;
+    display:flex; align-items:center; gap:12px;
+  }
+  .de-head::after{
+    content:""; flex:1; height:1px;
+    background:linear-gradient(90deg,var(--line),transparent);
+  }
+  .de-block p{ font-size:15px; line-height:1.8; margin:0 0 18px; }
+  .de-block p:last-child{ margin-bottom:0; }
+  .bio-single h1{
+    color:var(--lan-deep); font-size:var(--fs-page); margin:0;
+    letter-spacing:.14em; font-weight:600; line-height:1.3;
+  }
+  .bio-single h2 .en{
+    display:block; font-family:"Newsreader",serif; font-size:16.5px;
+    letter-spacing:.08em; text-transform:none; color:var(--qing);
+    font-weight:400; margin-top:8px;
+  }
+  .bio-single h2 .en{ display:block; font-family:"Newsreader",serif; font-size:14px; letter-spacing:.06em; color: var(--muted); font-weight:400; margin-top:6px; }
+
+.timeline{ margin-top: 50px; }
+  .timeline .row{ display:grid; grid-template-columns: 120px 1fr; gap: 30px; padding: 22px 0; border-top:1px solid var(--line); }
+  .timeline .row:last-child{ border-bottom:1px solid var(--line); }
+  .timeline .yr{ font-family:"Newsreader",serif; font-size: 22px; color: var(--qing); letter-spacing:.1em; }
+  .timeline .what{ font-size: 16.5px; color: #2b2f36; }
+  .timeline .what strong{ color: var(--lan-deep); font-family:"Noto Serif SC",serif; font-weight:500; }
+  @media (max-width: 900px){ .timeline .row{ grid-template-columns: 80px 1fr; gap: 18px; } }
+
+  .bio-single h1 .role{
+    display:inline-block; margin-left:14px; vertical-align:.22em;
+    font-family:"Noto Sans SC",sans-serif; font-weight:400;
+    font-size:13px; letter-spacing:.1em; color:var(--qing-ink);
+    padding:4px 12px; border-radius:999px;
+    background:rgba(84,128,136,.11);
+  }
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="single">
+<a class="skip" href="#main">跳到主内容 · Zum Inhalt springen</a>
+
+<header>
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">
+      <img src="images/logo.png" alt="" class="brand-img" width="40" height="40">
+      <span class="brand-text">
+        <span class="cn" lang="zh-Hans">青蓝中文</span>
+        <span class="en">Qinglan Chinesisch</span>
+      </span>
+    </a>
+    <nav class="links" aria-label="Hauptnavigation">
+      <a href="about.html" class="current"><span lang="zh-Hans">关于我</span><span class="de">Über mich</span></a>
+      <a href="philosophy.html"><span lang="zh-Hans">理念</span><span class="de">Ansatz</span></a>
+      <a href="courses.html"><span lang="zh-Hans">课程</span><span class="de">Kurse</span></a>
+      <a href="contact.html"><span lang="zh-Hans">联系</span><span class="de">Kontakt</span></a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobil">
+    <a href="about.html" aria-current="page"><span lang="zh-Hans">关于我</span><span class="de">Über mich</span></a>
+    <a href="philosophy.html"><span lang="zh-Hans">理念</span><span class="de">Ansatz</span></a>
+    <a href="courses.html"><span lang="zh-Hans">课程</span><span class="de">Kurse</span></a>
+    <a href="contact.html"><span lang="zh-Hans">联系</span><span class="de">Kontakt</span></a>
+  </nav>
+</header>
+
+<main id="main">
+
+
+<section>
+  <div class="wrap">
+    <div class="bio-single">
+      <h1 lang="zh-Hans">乔琼<span class="role">任课教师</span></h1>
+      <span class="name-rule" aria-hidden="true"></span>
+
+      <p class="bio-cred" lang="zh-Hans">
+        北京师范大学教育管理学硕士，具备高级中学教师资格，曾在清华大学从事继续教育研发工作，近年来专注于海外儿童中文教学。
+      </p>
+
+      <p lang="zh-Hans">
+        最初拿起语文课本，是为了教自己的孩子。随着他们的成长和更多孩子的加入，我深切体会到，在异国他乡延续母语，最难的不是开始，而是坚持。学中文是一场需要极大耐力的马拉松，文化环境缺失、枯燥的记忆、孩子缺乏动力，都是这条路上的绊脚石。
+      </p>
+
+      <p lang="zh-Hans">
+        为了应对这些挑战，我关注每个孩子的认知特点和学习需求，有针对性地设计教学活动。通过绘本故事、课堂游戏、角色扮演、文化体验等形式，结合多样化的教具，创设具体的学习情境，激发孩子的学习兴趣，引导他们更加主动地用中文思考与表达。
+      </p>
+
+      <p lang="zh-Hans">
+        在这一过程中，我也不断观察、思考和尝试，逐渐形成了自己对海外儿童中文教育的理解和教学思路。
+      </p>
+
+      <p class="bio-link">
+        <a class="more" href="philosophy.html"><span lang="zh-Hans">查看教学理念</span> · Mehr zum Ansatz <span class="arr" aria-hidden="true">→</span></a>
+      </p>
+
+    
+      <div class="de-block" lang="de">
+        <h2 class="de-head" lang="de">Joanna Qiao</h2>
+        <p>
+          Als ich begann, meinen eigenen Kindern Chinesisch beizubringen, wurde mir mit der Zeit bewusst: Die größte Herausforderung beim Erlernen der Muttersprache fernab der Heimat ist nicht der Anfang, sondern das Dranbleiben.
+        </p>
+        <p>
+          Deshalb gestalte ich meinen Unterricht abwechslungsreich und orientiere mich an den individuellen Lernbedürfnissen der Kinder. Mit Geschichten, Spielen, Rollenspielen, kulturellen Aktivitäten und vielfältigen Materialien möchte ich ihre Freude am Chinesischen wecken und sie ermutigen, selbstständig auf Chinesisch zu denken und sich auszudrücken.
+        </p>
+        <p>
+          Durch die langjährige Begleitung der Kinder habe ich dabei meinen eigenen Ansatz für die chinesische Sprachbildung im Ausland entwickelt.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <nav class="foot-line" aria-label="Fußzeile">
+      <a href="about.html"><span lang="zh-Hans">关于我</span> · Über mich</a>
+      <a href="philosophy.html"><span lang="zh-Hans">教学理念</span> · Ansatz</a>
+      <a href="courses.html"><span lang="zh-Hans">课程设置</span> · Kurse</a>
+      <a href="contact.html"><span lang="zh-Hans">联系</span> · Kontakt</a>
+      <a href="mailto:qinglankids@gmail.com">qinglankids@gmail.com</a>
+    </nav>
+    <div class="foot-bottom">
+      <div>© 2026 青蓝中文 · QINGLAN CHINESISCH · Berlin · Potsdam</div>
+      <div><a href="impressum.html">法律信息 Impressum</a> <a href="datenschutz.html">隐私声明 Datenschutz</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+
+  const tgl = document.getElementById('navToggle');
+  const mnav = document.getElementById('mobileNav');
+  tgl.addEventListener('click', ()=>{
+    const open = mnav.classList.toggle('open');
+    tgl.setAttribute('aria-expanded', String(open));
+    tgl.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+  });
+  document.addEventListener('keydown', e=>{
+    if(e.key === 'Escape' && mnav.classList.contains('open')){ tgl.click(); tgl.focus(); }
+  });
+
+</script>
+</body>
+</html>

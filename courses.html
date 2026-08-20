@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>课程设置 · 青蓝中文 — Kursangebot</title>
+<meta name="description" content="经典语文课（6 岁起，90 分钟，6–10 人）与学前启蒙课（5–6 岁，60 分钟）。人教版教材系统学习。Chinesischkurse in Berlin Jungfernheide und Potsdam.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="青蓝中文 · Qinglan Chinesisch">
+<meta property="og:title" content="课程设置｜经典语文课 · 学前启蒙课">
+<meta property="og:description" content="经典语文课（6 岁起，90 分钟，6–10 人）与学前启蒙课（5–6 岁，60 分钟）。人教版教材系统学习。Chinesischkurse in Berlin Jungfernheide und Potsdam.">
+<meta property="og:url" content="https://www.qinglan.de/courses.html">
+<meta property="og:image" content="https://www.qinglan.de/images/hero-bg.jpg">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preload" href="fonts/NotoSerifSC-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/NotoSansSC-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+<style>
+  /* ══ 信息层级：三级对比 ══════════════════════
+     ① 主 — 家长扫读要抓的：数值、时间、课程名
+        深靛蓝 · 15–16px · 500/600 · 宋体
+     ② 次 — 支撑信息：标签、说明文字
+        中灰 · 12.5–14px · 400 · 黑体
+     ③ 辅 — 德语对照、单位
+        浅灰 · 11px · 400 · Newsreader · 独立成行     */
+
+  /* ── 开班表 ── */
+  table.termine thead th{
+    color:var(--qing-ink); font-size:12px; font-weight:500;
+    letter-spacing:.06em;
+  }
+  table.termine thead th i{
+    color:#5f7284; font-size:10px; font-weight:400;
+    display:block; margin-top:3px; letter-spacing:.1em;
+  }
+  /* rowspan 导致列数不齐，用类名选而非 nth-child */
+  table.termine td.tm{
+    color:var(--lan-deep); font-weight:600; font-size:15.5px;
+    font-family:"Newsreader",serif; letter-spacing:.01em;
+  }
+  table.termine td.kurs{
+    color:var(--lan-deep); font-weight:600; font-size:15px;
+    font-family:"Noto Serif SC",serif;
+  }
+  table.termine th[scope="rowgroup"] span{
+    color:var(--lan-deep); font-weight:600; font-size:15px;
+    font-family:"Noto Serif SC",serif;
+  }
+  table.termine th[scope="rowgroup"] i{
+    display:block; margin-top:4px; font-size:11px; font-weight:400;
+    color:#556a7d; font-family:"Newsreader",serif; letter-spacing:.06em; font-style:normal;
+  }
+  /* 已满行整体弱化 */
+  table.termine tr.done td.tm,
+  table.termine tr.done td.kurs{ color:#5f7284; font-weight:500; }
+
+  /* ── 数据网格：数值放大、标签缩小 ── */
+  .facts-mini dt, .slide dl dt, .single-card dl dt{
+    color:#5f7284; font-size:11.5px; font-weight:400;
+    letter-spacing:.04em; margin-bottom:5px;
+  }
+  .facts-mini dt i, .slide dl dt i, .single-card dl dt i{
+    color:#5f7284; font-size:11px; margin-left:6px; letter-spacing:.08em;
+  }
+  .slide dl dd, .single-card dl dd{
+    color:var(--lan-deep); font-weight:600; font-size:16px;
+    font-family:"Noto Serif SC",serif; line-height:1.5;
+  }
+  .slide dl dd i, .single-card dl dd i{
+    display:block; margin-top:3px;
+    font-weight:400; font-size:11px; color:#5f7284;
+    font-family:"Newsreader",serif; letter-spacing:.02em;
+  }
+  /* 学费：全页最重的数字 */
+  .slide dl > div:last-child dd,
+  .single-card dl > div:last-child dd{ color:var(--qing-deep); }
+  .slide dl > div:last-child dd b,
+  .single-card dl > div:last-child dd b{
+    font-size:20px; font-weight:600; letter-spacing:.01em;
+  }
+
+  /* ── 学年表 ── */
+  table.stages thead th{
+    color:var(--qing-ink); font-size:12px; font-weight:500; letter-spacing:.06em;
+  }
+  table.stages td:nth-child(1){
+    color:var(--mauve-mid); font-weight:600; font-size:15px;
+    font-family:"Newsreader",serif;
+  }
+  table.stages td:nth-child(2){
+    color:var(--lan-deep); font-weight:600; font-size:14.5px;
+    font-family:"Noto Serif SC",serif;
+  }
+  table.stages td:nth-child(3){ color:var(--qing-ink); font-weight:500; font-size:13.5px; }
+  table.stages td:nth-child(4){ color:#546778; font-size:12.5px; }
+  table.stages td:nth-child(5){ color:#546778; font-size:12px; }
+
+  /* ── 学习方式 ── */
+  .way-list li b{
+    color:var(--lan-deep); font-weight:600; font-size:14.5px;
+    font-family:"Noto Serif SC",serif;
+  }
+  .way-list li span{ color:#4a5563; font-size:13.5px; }
+
+  /* ── 面板标题 ── */
+  .slide h3, .single-card h3{
+    color:var(--lan-deep); font-weight:600;
+  }
+  .slide h3 .lat, .single-card h3 .lat{
+    color:#5f7284; font-weight:400; font-size:11.5px;
+    letter-spacing:.08em; margin-left:10px;
+  }
+
+  /* ── 面板正文 ── */
+  .slide-lead{ color:#3c4249; font-size:15px; line-height:1.95; }
+  .slide-lead b{ color:var(--lan-deep); font-weight:600; }
+  .slide-lead.de{
+    font-family:"Newsreader",serif; font-size:13.5px;
+    color:#5f7284; margin-top:-12px; line-height:1.75;
+  }
+
+  /* ── 当前开班时间表 ── */
+  .table-wrap{
+    border:1px solid var(--line-soft); border-radius:var(--r); overflow:hidden;
+    box-shadow:var(--sh); background:#fff;
+  }
+  .table-scroll{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  table.termine{ width:100%; border-collapse:collapse; font-size:15px; min-width:620px; }
+  table.termine thead th{
+    background:var(--paper-warm); color:var(--muted); font-weight:500; text-align:left;
+    font-family:"Noto Serif SC",serif; font-size:13px; letter-spacing:.06em;
+    white-space:nowrap; padding:16px 18px 12px; border-bottom:1px solid var(--line);
+  }
+  table.termine thead th i{
+    display:block; font-family:"Newsreader",serif; font-style:normal; font-weight:400;
+    font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-top:3px;
+  }
+  table.termine td{
+    padding:16px 18px; text-align:left; vertical-align:middle;
+    border-bottom:1px solid var(--line-soft);
+  }
+  table.termine tbody th{
+    padding:16px 18px; text-align:left; vertical-align:middle;
+    font-family:"Noto Serif SC",serif; font-size:15px; color:var(--lan-deep); font-weight:500;
+    white-space:nowrap; border-right:1px solid var(--line-soft);
+    border-bottom:1px solid var(--line-soft); background:rgba(244,239,228,.34);
+  }
+  table.termine tbody th i{
+    display:block; font-family:"Newsreader",serif; font-style:normal; font-weight:400;
+    font-size:11.5px; letter-spacing:.04em; color:var(--muted); margin-top:3px;
+  }
+  table.termine tr.grp:not(:first-child) th,
+  table.termine tr.grp:not(:first-child) td{ border-top:1px solid var(--line); }
+  table.termine tbody tr:last-child th,
+  table.termine tbody tr:last-child td{ border-bottom:none; }
+
+  table.termine .tm{
+    font-family:"Newsreader",serif; font-size:15px; color:var(--lan-deep);
+    white-space:nowrap; font-variant-numeric:tabular-nums;
+  }
+  table.termine .kurs{ font-family:"Noto Serif SC",serif; color:#2c3238; font-size:15px; }
+
+  .st{
+    display:inline-flex; align-items:center; gap:7px; font-size:13px; white-space:nowrap;
+    padding:6px 13px; border-radius:999px; line-height:1;
+  }
+  .st::before{ content:""; width:6px; height:6px; border-radius:50%; flex:none; }
+  .st.free{ color:var(--qing-ink);  background:rgba(63,110,128,.11); }
+  .st.free::before{ background:var(--qing); }
+  .st.few{  color:var(--qing-ink); background:rgba(54,116,125,.12); }
+  .st.few::before{ background:var(--mauve); }
+  .st.full{ color:var(--muted);     background:rgba(107,100,89,.09); }
+  .st.full::before{ background:#b8b1a4; }
+
+  table.termine tr.full td:not(.tm){ color:var(--muted); }
+  table.termine tr.full{ background:rgba(240,236,228,.45); }
+  table.termine a{
+    display:inline-flex; align-items:center; gap:6px; font-size:14px;
+    color:var(--qing-ink); text-decoration:none; white-space:nowrap;
+    border-bottom:1px solid transparent; padding-bottom:1px; transition:border-color .25s;
+  }
+  table.termine a:hover{ border-bottom-color:var(--qing); }
+  table.termine a span{ transition:transform .25s; }
+  table.termine a:hover span{ transform:translateX(3px); }
+  table.termine tr.full a{ color:var(--muted); }
+  table.termine tbody tr:not(.full):hover td{ background:rgba(63,110,128,.035); }
+
+  /* ── 横向滑动面板 ── */
+  .slider{ position:relative; }
+  .slide-nav{
+    display:flex; gap:6px; flex-wrap:wrap; margin-bottom:16px;
+  }
+  .slide-nav a{
+    font-family:"Noto Serif SC",serif; font-size:13px; color:var(--muted);
+    text-decoration:none; padding:7px 16px; border-radius:999px;
+    background:rgba(255,255,255,.7); border:1px solid var(--line-soft);
+    transition:background .25s, color .25s, border-color .25s; white-space:nowrap;
+  }
+  .slide-nav a:hover{ color:var(--lan-deep); border-color:var(--qing-light); }
+  .slide-nav a.on{ background:var(--lan-deep); color:#fff; border-color:var(--lan-deep); }
+
+  .slide-track{
+    display:grid; grid-auto-flow:column; grid-auto-columns:100%;
+    align-items:start;
+    gap:28px; overflow-x:auto; scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch; padding-bottom:6px;
+    scrollbar-width:thin; scrollbar-color:var(--line) transparent;
+  }
+  .slide-track::-webkit-scrollbar{ height:6px; }
+  .slide-track::-webkit-scrollbar-thumb{ background:var(--line); border-radius:99px; }
+  .slide-track::-webkit-scrollbar-track{ background:transparent; }
+
+  .slide{
+    scroll-snap-align:start; scroll-margin-top:90px;
+    display:block; align-self:start;
+    background:#fff; border:1px solid var(--line-soft); border-radius:var(--r);
+    box-shadow:var(--sh); padding:28px 32px; position:relative; overflow:hidden;
+  }
+  .slide::after{
+    content:""; position:absolute; left:0; right:0; bottom:0; height:3px;
+    background:linear-gradient(90deg, var(--lan-deep), var(--qing) 55%, var(--mauve));
+  }
+  .slide > h3{
+    margin:0 0 18px; font-size:var(--fs-panel); color:var(--lan-deep); font-weight:500;
+    display:flex; align-items:baseline; gap:13px; flex-wrap:wrap;
+    padding-bottom:11px; border-bottom:1px solid var(--line-soft);
+  }
+  .slide > h3 .lat, .inner-h .lat{
+    font-family:"Newsreader",serif; font-size:11.5px; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--qing-ink); font-weight:400;
+  }
+  .sub-lead .lat{
+    font-family:"Newsreader",serif; font-size:11px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--qing-ink);
+  }
+  .sec-head h2 .tag{
+    font-style:normal; font-size:11.5px; padding:4px 12px; border-radius:999px;
+    background:rgba(54,116,125,.12); color:#1f4a52;
+    font-family:"Noto Serif SC",serif; letter-spacing:0; margin-left:4px;
+    vertical-align:.12em; white-space:nowrap;
+  }
+  .nb{ white-space:nowrap; }
+  .slide-lead.de{ font-family:"Newsreader",serif; font-size:14px; color:var(--muted); margin-top:-14px; }
+  .slide-lead{ margin:0 0 20px; font-size:15px; line-height:1.9; color:#3c4249; }
+  .slide-lead b{ color:var(--lan-deep); font-weight:600; }
+  .slide-lead a{ color:var(--qing-ink); }
+  .slide-hint{
+    margin:12px 0 0; font-size:11.5px; color:var(--muted); letter-spacing:.04em; text-align:center;
+  }
+
+  /* 高表格在面板内滚动，避免撑高整条轨道 */
+  .slide .table-wrap{ max-height:330px; overflow-y:auto; box-shadow:none; }
+  .slide .table-wrap::-webkit-scrollbar{ width:6px; }
+  .slide .table-wrap::-webkit-scrollbar-thumb{ background:var(--line); border-radius:99px; }
+  .slide table.stages thead th{ position:sticky; top:0; z-index:1; }
+
+  /* 面板内的数据网格 */
+  .slide .course-facts, .single-card .course-facts{
+    box-shadow:none; border-radius:var(--r-sm); margin:0;
+  }
+
+  /* 学前启蒙课：单卡 */
+  .single-card{
+    background:#fff; border:1px solid var(--line-soft); border-radius:var(--r);
+    box-shadow:var(--sh); padding:28px 32px; position:relative; overflow:hidden;
+  }
+  .single-card::after{
+    content:""; position:absolute; left:0; right:0; bottom:0; height:3px;
+    background:linear-gradient(90deg, var(--lan-deep), var(--qing) 55%, var(--mauve));
+  }
+  .inner-h{
+    margin:26px 0 14px; font-size:16.5px; color:var(--lan-deep); font-weight:500;
+    display:flex; align-items:baseline; gap:13px; flex-wrap:wrap;
+    padding-bottom:10px; border-bottom:1px solid var(--line-soft);
+  }
+  .way-list.bare{ background:none; border:none; box-shadow:none; padding:0; }
+
+  @media (max-width: 700px){
+    .slide, .single-card{ padding:22px 20px; }
+    .slide-track{ grid-auto-columns:88%; }
+  }
+
+  /* ── 关键数据横条 ── */
+  .course-facts{
+    display:grid; grid-template-columns:1fr 1fr; gap:0; margin:0 0 34px;
+    background:#fff; border:1px solid var(--line-soft); border-radius:var(--r);
+    box-shadow:var(--sh); overflow:hidden;
+  }
+  .course-facts > div{
+    padding:14px 18px; border-right:1px solid var(--line-soft); border-bottom:1px solid var(--line-soft);
+  }
+  .course-facts > div:nth-child(2n){ border-right:none; }
+  .course-facts > div:nth-last-child(-n+2){ border-bottom:none; }
+  .course-facts dt{
+    font-size:11.5px; letter-spacing:.1em; color:var(--muted);
+    font-family:"Noto Serif SC",serif; margin-bottom:4px;
+  }
+  .course-facts dd{
+    margin:0; font-size:14px; color:var(--lan-deep); font-family:"Noto Serif SC",serif; line-height:1.5;
+  }
+  .course-facts dt i, .course-facts dd i{
+    font-family:"Newsreader",serif; font-style:normal; font-weight:400;
+    font-size:11.5px; letter-spacing:.03em; color:var(--muted); margin-left:7px;
+  }
+  .course-facts dt i{ font-size:11px; letter-spacing:.08em; }
+  .course-facts dt, .course-facts dd{ white-space:nowrap; }
+  .course-facts dd b{ font-weight:600; }
+
+  /* ── 内容模块 ── */
+
+    .goal-text b{ color:var(--lan-deep); font-weight:600; }
+
+  /* 三个阶段：横向递进 */
+  .phase-row{ list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(3,1fr); gap:26px; counter-reset:ph; }
+  .phase-row li{
+    background:var(--paper-warm); border-radius:var(--r); padding:20px 22px;
+    position:relative; border:1px solid var(--line-soft);
+  }
+  /* 阶段之间的箭头：白底圆形徽章，浮在两卡间隙上 */
+  .phase-row li:not(:last-child)::after{
+    content:""; position:absolute; right:-17px; top:50%;
+    width:26px; height:26px; margin-top:-13px; z-index:2;
+    border-radius:50%; background:#fff;
+    border:1px solid var(--line);
+    box-shadow:0 2px 8px -3px rgba(18,47,78,.28);
+    background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2336747d' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h13M13 6l6 6-6 6'/%3E%3C/svg%3E");
+    background-repeat:no-repeat; background-position:center;
+    background-size:14px 14px;
+  }
+  .phase-row b{
+    display:flex; align-items:baseline; gap:9px; flex-wrap:wrap;
+    font-family:"Noto Serif SC",serif; font-size:15px;
+    color:var(--lan-deep); font-weight:500; margin-bottom:7px;
+  }
+  .phase-row b em{
+    font-style:normal; font-size:11.5px; font-weight:400; padding:3px 9px;
+    border-radius:999px; background:rgba(63,110,128,.11); color:var(--qing-ink);
+  }
+  .phase-row span{ display:block; font-size:14px; color:#3c4249; line-height:1.7; }
+  .phase-row i{
+    display:block; margin-top:8px; padding-top:8px; border-top:1px solid var(--line-soft);
+    font-style:normal; font-size:13px; color:var(--muted);
+  }
+
+  /* 学习方式：竖排条目 */
+  .fit-lead{
+    margin:0 0 14px; font-family:"Noto Serif SC",serif; font-size:16.5px;
+    color:var(--lan-deep); font-weight:500; line-height:1.9;
+  }
+  .fit-sub{ margin:0 0 12px; font-size:14px; color:#3c4249; line-height:1.85; }
+  .fit-list{
+    margin:0 0 20px; padding:0; list-style:none; counter-reset:fit;
+    display:grid; gap:10px;
+  }
+  .fit-list li{
+    counter-increment:fit; position:relative; padding-left:30px;
+    font-size:14px; color:#3c4249; line-height:1.85;
+  }
+  .fit-list li::before{
+    content:counter(fit); position:absolute; left:0; top:2px;
+    width:20px; height:20px; border-radius:50%; text-align:center;
+    font-family:"Newsreader",serif; font-size:11.5px; line-height:20px;
+    background:rgba(63,110,128,.12); color:var(--qing-ink);
+  }
+  .fit-list b{ font-weight:500; color:var(--lan-deep); }
+
+  .way-list{
+    list-style:none; margin:0; padding:6px 30px;
+    background:#fff; border:1px solid var(--line-soft); border-radius:var(--r); box-shadow:var(--sh);
+  }
+  .way-list li{
+    display:grid; grid-template-columns:118px 1fr; gap:24px; align-items:baseline;
+    padding:16px 0; border-bottom:1px solid var(--line-soft);
+  }
+  .way-list li:last-child{ border-bottom:none; }
+  .way-list b{ font-family:"Noto Serif SC",serif; font-size:15px; color:var(--lan-deep); font-weight:500; }
+  .way-list span{ font-size:14px; color:#3c4249; line-height:1.8; }
+
+  @media (max-width: 900px){
+    .course-facts{ grid-template-columns:1fr; }
+    .course-facts > div{ border-right:none !important; border-bottom:1px solid var(--line-soft) !important; }
+    .course-facts > div:last-child{ border-bottom:none !important; }
+    .phase-row{ grid-template-columns:1fr; }
+    .phase-row li:not(:last-child)::after{
+      right:auto; left:50%; margin-left:-13px; top:auto; bottom:-17px; margin-top:0;
+      background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2336747d' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 5v13M6 13l6 6 6-6'/%3E%3C/svg%3E");
+    }
+    .way-list{ padding:6px 22px; }
+    .way-list li{ grid-template-columns:1fr; gap:5px; padding:14px 0; }
+  }
+
+  /* 课程阶段表 */
+  .table-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; border-radius:var(--r-sm); }
+  table.stages{ width:100%; border-collapse:collapse; font-size:13px; min-width:560px; background:#fff; }
+  table.stages th, table.stages td{ padding:11px 14px; text-align:left; border-bottom:1px solid var(--line-soft); }
+  table.stages thead th{
+    background:var(--paper-warm); color:var(--lan-deep); font-weight:500;
+    font-family:"Noto Serif SC",serif; font-size:13px; white-space:nowrap;
+  }
+  table.stages tbody tr:nth-child(even){ background:rgba(236,240,242,.5); }
+  table.stages tbody td:first-child{ font-family:"Newsreader",serif; color:var(--qing-ink); font-size:14px; }
+  table.stages tfoot td{ font-family:"Noto Serif SC",serif; color:var(--lan-deep); background:var(--paper-warm); border-bottom:none; }
+
+
+  /* 表格横向滚动提示（仅窄屏） */
+  .table-hint{ display:none; }
+  @media (max-width:760px){
+    .table-wrap{ position:relative; }
+    .table-wrap::after{
+      content:""; position:absolute; top:0; right:0; bottom:0; width:34px;
+      pointer-events:none; border-radius:0 var(--r-sm) var(--r-sm) 0;
+      background:linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.92));
+    }
+    .table-hint{
+      display:block; margin:8px 0 0; text-align:center;
+      font-size:12px; color:#5f7280; letter-spacing:.02em;
+    }
+  }
+  .sr-only{
+    position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+    overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0;
+  }
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主内容 · Zum Inhalt springen</a>
+
+<header>
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">
+      <img src="images/logo.png" alt="" class="brand-img" width="40" height="40">
+      <span class="brand-text">
+        <span class="cn" lang="zh-Hans">青蓝中文</span>
+        <span class="en">Qinglan Chinesisch</span>
+      </span>
+    </a>
+    <nav class="links" aria-label="Hauptnavigation">
+      <a href="about.html"><span lang="zh-Hans">关于我</span><span class="de">Über mich</span></a>
+      <a href="philosophy.html"><span lang="zh-Hans">理念</span><span class="de">Ansatz</span></a>
+      <a href="courses.html" class="current"><span lang="zh-Hans">课程</span><span class="de">Kurse</span></a>
+      <a href="contact.html"><span lang="zh-Hans">联系</span><span class="de">Kontakt</span></a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobil">
+    <a href="about.html"><span lang="zh-Hans">关于我</span><span class="de">Über mich</span></a>
+    <a href="philosophy.html"><span lang="zh-Hans">理念</span><span class="de">Ansatz</span></a>
+    <a href="courses.html" aria-current="page"><span lang="zh-Hans">课程</span><span class="de">Kurse</span></a>
+    <a href="contact.html"><span lang="zh-Hans">联系</span><span class="de">Kontakt</span></a>
+  </nav>
+</header>
+
+<main id="main">
+
+
+<!-- ══════ 当前开班时间 ══════
+     改动只需编辑下面的列表项：class 用 free / few / full 三种。
+     full 的条目不带链接。 -->
+<section class="cool tight" id="termine">
+  <div class="wrap">
+      <h1 class="sr-only" lang="zh-Hans">课程设置 · Unsere Kurse</h1>
+    <div class="sec-head" style="margin-bottom:26px;">
+      <h2 lang="zh-Hans">
+        <svg class="h2-leaf" viewBox="0 0 22 22" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="lg-leaf-c" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0%" stop-color="#3f7d8a"/><stop offset="52%" stop-color="#5c9aa4"/><stop offset="100%" stop-color="#8fc0c4"/>
+            </linearGradient>
+          </defs>
+          <path d="M2.4 19.6 Q2.4 7.6 19.6 2.4 Q19.6 14.4 2.4 19.6 Z" fill="url(#lg-leaf-c)"/>
+          <path d="M2.4 19.6 Q10 12 19.6 2.4" fill="none" stroke="#fafbfd" stroke-width="1.05" stroke-linecap="round" opacity=".62"/>
+        </svg>当前开班 <span class="sep" aria-hidden="true">·</span>
+        <span lang="de" class="lat">Aktuelle Kurse</span></h2>
+    </div>
+
+    <div class="table-wrap">
+      <div class="table-scroll">
+      <table class="termine">
+        <thead>
+          <tr>
+            <th scope="col"><span lang="zh-Hans">地点</span><i>Ort</i></th>
+            <th scope="col"><span lang="zh-Hans">时间</span><i>Zeit</i></th>
+            <th scope="col"><span lang="zh-Hans">课程</span><i>Kurs</i></th>
+            <th scope="col"><span lang="zh-Hans">名额</span><i>Plätze</i></th>
+            <th scope="col"><span lang="zh-Hans">报名</span><i>Anmeldung</i></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="grp">
+            <th scope="rowgroup" rowspan="2"><span lang="zh-Hans">周六</span><i>Sa · Berlin</i></th>
+            <td class="tm">09:00 – 10:30</td>
+            <td class="kurs" lang="zh-Hans">一年级下册</td>
+            <td><span class="st free" lang="zh-Hans">有名额</span></td>
+            <td><a href="contact.html#form" lang="zh-Hans">申请试听 <span aria-hidden="true">→</span></a></td>
+          </tr>
+          <tr>
+            <td class="tm">10:45 – 12:15</td>
+            <td class="kurs" lang="zh-Hans">一年级上册</td>
+            <td><span class="st free" lang="zh-Hans">有名额</span></td>
+            <td><a href="contact.html#form" lang="zh-Hans">申请试听 <span aria-hidden="true">→</span></a></td>
+          </tr>
+          <tr class="grp">
+            <th scope="rowgroup" rowspan="2"><span lang="zh-Hans">周日</span><i>So · Potsdam</i></th>
+            <td class="tm">09:30 – 11:00</td>
+            <td class="kurs" lang="zh-Hans">一年级下册</td>
+            <td><span class="st few" lang="zh-Hans">剩余 3 个名额</span></td>
+            <td><a href="contact.html#form" lang="zh-Hans">申请试听 <span aria-hidden="true">→</span></a></td>
+          </tr>
+          <tr class="full">
+            <td class="tm">15:30 – 17:00</td>
+            <td class="kurs" lang="zh-Hans">二年级下册</td>
+            <td><span class="st full" lang="zh-Hans">已满</span></td>
+            <td><a href="contact.html#form" lang="zh-Hans">登记候补 <span aria-hidden="true">→</span></a></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="table-hint" lang="zh-Hans" aria-hidden="true">← 左右滑动查看名额与报名 →</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 模块 2：经典语文课 ══════
+     四个面板可左右滑动（scroll-snap，无 JS 也能滑）。
+     加面板：复制一个 slide 区块，并在 slide-nav 里加一个对应按钮。 -->
+<section id="jingdian">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 lang="zh-Hans"><svg class="h2-leaf" viewBox="0 0 22 22" aria-hidden="true" focusable="false">
+          <path d="M2.4 19.6 Q2.4 7.6 19.6 2.4 Q19.6 14.4 2.4 19.6 Z" fill="url(#lg-leaf-c)"/>
+          <path d="M2.4 19.6 Q10 12 19.6 2.4" fill="none" stroke="#fafbfd" stroke-width="1.05" stroke-linecap="round" opacity=".62"/>
+        </svg>经典语文课 <span class="sep" aria-hidden="true">·</span> <span lang="de" class="lat">Klassischer Chinesischkurs</span></h2>
+    </div>
+
+    <div class="slider">
+      <div class="slide-nav" role="tablist" aria-label="课程内容分节">
+        <a href="#s-1" class="on">概况</a>
+        <a href="#s-2">适合谁</a>
+        <a href="#s-3">学习目标</a>
+        <a href="#s-4">课程体系</a>
+        <a href="#s-5">学习方式</a>
+      </div>
+
+      <div class="slide-track">
+        <article class="slide" id="s-1" aria-labelledby="s-1-h">
+          <h3 id="s-1-h" lang="zh-Hans">概况 <span class="lat">Überblick</span></h3>
+          <p class="slide-lead" lang="zh-Hans">以人教版《语文》教材为主线，改编和补充部分内容。1–4 年级以教材为主，5–6 年级从教材逐步转向名著精读。</p>
+          <p class="slide-lead de" lang="de">Grundlage sind chinesische Grundschullehrbücher, deren Inhalte teilweise angepasst und ergänzt werden.</p>
+          <dl class="course-facts">
+            <div>
+              <dt><span lang="zh-Hans">年龄</span> <i>Alter</i></dt>
+              <dd><span lang="zh-Hans">6 岁起</span> <i>ab 6 Jahren</i></dd>
+            </div>
+            <div>
+              <dt><span lang="zh-Hans">课时</span> <i>Unterricht</i></dt>
+              <dd><span lang="zh-Hans">每周 1 次 · 90 分钟</span> <i>1× pro Woche · 90 Minuten</i></dd>
+            </div>
+            <div>
+              <dt><span lang="zh-Hans">班额</span> <i>Klassengröße</i></dt>
+              <dd><span lang="zh-Hans">6 – 10 人</span> <i>6–10 Kinder</i></dd>
+            </div>
+            <div>
+              <dt><span lang="zh-Hans">学费</span> <i>Kursgebühr</i></dt>
+              <dd><span lang="zh-Hans"><b>280 €</b> / 学期 · 17 次课</span> <i>280 € / Schulhalbjahr · 17 Termine</i></dd>
+            </div>
+          </dl>
+        </article>
+        <article class="slide" id="s-2" aria-labelledby="s-2-h">
+          <h3 id="s-2-h" lang="zh-Hans">适合谁 <span class="lat">Für wen?</span></h3>
+          <p class="fit-lead" lang="zh-Hans">本课程适合希望系统学习人教版语文课本的家庭。</p>
+          <p class="fit-sub" lang="zh-Hans">如果孩子具备以下基础，会更容易适应我们的课堂：</p>
+          <ol class="fit-list" lang="zh-Hans">
+            <li>能够用中文进行较为流畅的日常交流；</li>
+            <li>能够适应 <b>90 分钟</b>（休息 5 分钟）的课堂节奏，听懂基本的课堂指令；</li>
+            <li>进入<b>【一上】</b>时，建议有约 <b>100 字</b>的识字量（非必要条件）；进入<b>【一下】</b>时，建议已掌握拼音，并有约 <b>300 字</b>的识字量；</li>
+            <li>低年级阶段，家长能够支持孩子完成每周作业。</li>
+          </ol>
+        </article>
+        <article class="slide" id="s-3" aria-labelledby="s-3-h">
+          <h3 id="s-3-h" lang="zh-Hans">学习目标 <span class="lat">Lernziele</span></h3>
+          <ol class="phase-row">
+            <li>
+              <b lang="zh-Hans">1 – 2 年级<em>四年完成</em></b>
+              <span lang="zh-Hans">识字积累 · 简单阅读</span>
+              <i lang="zh-Hans">累计掌握约 1 500 字</i>
+            </li>
+            <li>
+              <b lang="zh-Hans">3 – 4 年级<em>四年完成</em></b>
+              <span lang="zh-Hans">独立阅读 · 基本写作</span>
+              <i lang="zh-Hans">累计掌握约 2 600 字</i>
+            </li>
+            <li>
+              <b lang="zh-Hans">5 – 6 年级<em>两年完成</em></b>
+              <span lang="zh-Hans">深度阅读 · 表达观点</span>
+              <i lang="zh-Hans">累计掌握约 3 000 字</i>
+            </li>
+          </ol>
+        </article>
+        <article class="slide" id="s-4" aria-labelledby="s-4-h">
+          <h3 id="s-4-h" lang="zh-Hans">课程体系 <span class="lat">Kursstruktur</span></h3>
+          <div class="table-wrap">
+          <table class="stages">
+            <thead>
+              <tr><th>学年</th><th>对应教材</th><th>识字量</th><th>测验</th><th>说明</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>一年级上</td><td>约 280 字</td><td>无测验</td><td>第二学期学习拼音</td></tr>
+              <tr><td>2</td><td>一年级下</td><td>约 380 字</td><td>每学期一次</td><td></td></tr>
+              <tr><td>3</td><td>二年级上</td><td>约 420 字</td><td>每单元一次</td><td></td></tr>
+              <tr><td>4</td><td>二年级下</td><td>约 420 字</td><td>每单元一次</td><td></td></tr>
+              <tr><td>5</td><td>三年级上</td><td>约 300 字</td><td>每单元一次</td><td></td></tr>
+              <tr><td>6</td><td>三年级下</td><td>约 300 字</td><td>每单元一次</td><td></td></tr>
+              <tr><td>7</td><td>四年级上</td><td>约 250 字</td><td>每单元一次</td><td></td></tr>
+              <tr><td>8</td><td>四年级下</td><td>约 250 字</td><td>每单元一次</td><td></td></tr>
+              <tr><td>9</td><td>五年级</td><td>约 300 字</td><td>每单元一次</td><td>教材之外增加名著精读</td></tr>
+              <tr><td>10</td><td>六年级</td><td>约 100 字</td><td>每单元一次</td><td>以名著精读为主，教材为辅</td></tr>
+            </tbody>
+            <tfoot>
+              <tr><td colspan="2">累计</td><td>约 3 000 字</td><td colspan="2"></td></tr>
+            </tfoot>
+          </table>
+        </div>
+        </article>
+        <article class="slide" id="s-5" aria-labelledby="s-5-h">
+          <h3 id="s-5-h" lang="zh-Hans">学习方式 <span class="lat">Lernweise</span></h3>
+          <ul class="way-list">
+            <li><b lang="zh-Hans">小班教学</b><span lang="zh-Hans">关注个体差异，给予有针对性的指导</span></li>
+            <li><b lang="zh-Hans">互动教学</b><span lang="zh-Hans">结合绘本、游戏、表演和教具，在互动与情境中学习和巩固</span></li>
+            <li><b lang="zh-Hans">有限使用多媒体</b><span lang="zh-Hans">减少屏幕依赖，仅在教学需要时使用，如科普视频、古诗动画等辅助内容</span></li>
+            <li><b lang="zh-Hans">分阶段阅读</b><span lang="zh-Hans">设置循序渐进的阅读任务，逐步培养中文阅读习惯</span></li>
+            <li><b lang="zh-Hans">作业与测验</b><span lang="zh-Hans">根据记忆规律安排每周作业和定期测验，辅以阶段性奖励</span></li>
+            <li><b lang="zh-Hans">主题拓展</b><span lang="zh-Hans">延伸至日常生活、自然科学、历史地理和中国文化等</span></li>
+          </ul>
+        </article>
+      </div>
+      <p class="slide-hint" lang="zh-Hans" aria-hidden="true">← 左右滑动查看 · zum Blättern wischen →</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════ 模块 3：学前启蒙课 ══════ -->
+<section id="shizi">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 lang="zh-Hans"><svg class="h2-leaf" viewBox="0 0 22 22" aria-hidden="true" focusable="false">
+          <path d="M2.4 19.6 Q2.4 7.6 19.6 2.4 Q19.6 14.4 2.4 19.6 Z" fill="url(#lg-leaf-c)"/>
+          <path d="M2.4 19.6 Q10 12 19.6 2.4" fill="none" stroke="#fafbfd" stroke-width="1.05" stroke-linecap="round" opacity=".62"/>
+        </svg>学前启蒙课 <span class="sep" aria-hidden="true">·</span> <span lang="de" class="lat">Vorschulkurs</span> <em class="tag" lang="zh-Hans">视需求开设</em></h2>
+    </div>
+
+    <div class="single-card">
+      <p class="slide-lead" lang="zh-Hans">通过儿歌、游戏、绘本和分级读物，让孩子在轻松有趣的情境中自然识字，培养中文学习兴趣和口语表达能力。</p>
+          <p class="slide-lead de" lang="de">Mit Liedern, Spielen und Bilderbüchern lernen die Kinder spielerisch Chinesisch und entwickeln ihre Ausdrucksfähigkeit.</p>
+      <dl class="course-facts">
+            <div>
+              <dt><span lang="zh-Hans">年龄</span> <i>Alter</i></dt>
+              <dd><span lang="zh-Hans">5 – 6 岁</span> <i>5–6 Jahre</i></dd>
+            </div>
+            <div>
+              <dt><span lang="zh-Hans">课时</span> <i>Unterricht</i></dt>
+              <dd><span lang="zh-Hans">每周 1 次 · 60 分钟</span> <i>1× pro Woche · 60 Minuten</i></dd>
+            </div>
+            <div>
+              <dt><span lang="zh-Hans">班额</span> <i>Klassengröße</i></dt>
+              <dd><span lang="zh-Hans">6 – 8 人</span> <i>6–8 Kinder</i></dd>
+            </div>
+            <div>
+              <dt><span lang="zh-Hans">学费</span> <i>Kursgebühr</i></dt>
+              <dd><span lang="zh-Hans"><b>240 €</b> / 学期 · 17 次课</span> <i>240 € / Schulhalbjahr · 17 Termine</i></dd>
+            </div>
+          </dl>
+
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <nav class="foot-line" aria-label="Fußzeile">
+      <a href="about.html"><span lang="zh-Hans">关于我</span> · Über mich</a>
+      <a href="philosophy.html"><span lang="zh-Hans">教学理念</span> · Ansatz</a>
+      <a href="courses.html"><span lang="zh-Hans">课程设置</span> · Kurse</a>
+      <a href="contact.html"><span lang="zh-Hans">联系</span> · Kontakt</a>
+      <a href="mailto:qinglankids@gmail.com">qinglankids@gmail.com</a>
+    </nav>
+    <div class="foot-bottom">
+      <div>© 2026 青蓝中文 · QINGLAN CHINESISCH · Berlin · Potsdam</div>
+      <div><a href="impressum.html">法律信息 Impressum</a> <a href="datenschutz.html">隐私声明 Datenschutz</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+
+  const tgl = document.getElementById('navToggle');
+  const mnav = document.getElementById('mobileNav');
+  tgl.addEventListener('click', ()=>{
+    const open = mnav.classList.toggle('open');
+    tgl.setAttribute('aria-expanded', String(open));
+    tgl.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+  });
+  document.addEventListener('keydown', e=>{
+    if(e.key === 'Escape' && mnav.classList.contains('open')){ tgl.click(); tgl.focus(); }
+  });
+
+
+  // 滑动面板：点导航平滑滚动 + 滚动时高亮当前面板（无 JS 也能手动滑）
+  (function(){
+    var track = document.querySelector('.slide-track');
+    if(!track) return;
+    var tabs = [].slice.call(document.querySelectorAll('.slide-nav a'));
+    var slides = [].slice.call(track.querySelectorAll('.slide'));
+    tabs.forEach(function(t, i){
+      t.addEventListener('click', function(e){
+        e.preventDefault();
+        track.scrollTo({ left: slides[i].offsetLeft - track.offsetLeft, behavior:'smooth' });
+      });
+    });
+    if('IntersectionObserver' in window){
+      var io = new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if(e.isIntersecting){
+            var i = slides.indexOf(e.target);
+            tabs.forEach(function(t,k){ t.classList.toggle('on', k===i); });
+          }
+        });
+      }, { root: track, threshold: .6 });
+      slides.forEach(function(sl){ io.observe(sl); });
+    }
+  })();
+</script>
+</body>
+</html>

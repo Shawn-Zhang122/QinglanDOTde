@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>教学理念 · 青蓝中文 — Mein Ansatz</title>
+  <meta name="description"
+    content="学习从兴趣开始，与生活场景联结，用中文去创造——青蓝中文的教学理念。Unser Ansatz: Chinesisch für Kinder in Berlin und Potsdam.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="青蓝中文 · Qinglan Chinesisch">
+  <meta property="og:title" content="教学理念｜青蓝中文 Qinglan Chinesisch">
+  <meta property="og:description"
+    content="学习从兴趣开始，与生活场景联结，用中文去创造——青蓝中文的教学理念。Unser Ansatz: Chinesisch für Kinder in Berlin und Potsdam.">
+  <meta property="og:url" content="https://www.qinglan.de/philosophy.html">
+  <meta property="og:image" content="https://www.qinglan.de/images/hero-bg.jpg">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preload" href="fonts/NotoSerifSC-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/NotoSansSC-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── 引子 ── */
+    .opening {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .op-cite p.op-quote {
+      margin: 0 0 20px;
+      font-family: "Noto Serif SC", serif;
+      font-weight: 600;
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.68;
+      letter-spacing: .04em;
+      color: var(--qing-deep);
+    }
+
+    .opening>p {
+      margin: 0 0 16px;
+      font-size: 16.5px;
+      line-height: 1.95;
+      color: #3c4249;
+      font-family: "Noto Serif SC", serif;
+      font-weight: 400;
+    }
+
+    .op-triad {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(12px, 2.4vw, 24px);
+      margin: 30px 0 14px !important;
+      flex-wrap: wrap;
+    }
+
+    .op-triad span {
+      font-family: "Noto Serif SC", serif;
+      font-size: clamp(20px, 2.4vw, 26px);
+      font-weight: 600;
+      letter-spacing: .1em;
+      background: linear-gradient(120deg, var(--lan-deep), var(--qing) 55%, var(--mauve));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .op-triad i {
+      font-style: normal;
+      color: var(--mauve);
+      font-size: 16.5px;
+    }
+
+    /* ── 每个理念：左大字 + 右正文 ── */
+    .idea {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 42px;
+      align-items: start;
+    }
+
+    .idea-pic {
+      margin: 0;
+    }
+
+    /* 两张配图上下叠放，整组随内容吸顶 */
+    .idea-pics {
+      position: sticky;
+      top: 104px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .idea-pic img {
+      width: 300px;
+      height: 225px;
+      object-fit: cover;
+      display: block;
+      border: 1px solid var(--line-soft);
+      border-radius: var(--r);
+      box-shadow: var(--sh);
+    }
+
+    .idea-pic figcaption {
+      margin-top: 9px;
+      font-size: 12.5px;
+      color: #5f7280;
+      line-height: 1.65;
+    }
+
+    #p1 .sec-head h2,
+    #p2 .sec-head h2,
+    #p3 .sec-head h2 {
+      color: #504677 !important;
+    }
+
+    #p1 .sec-head h2 .lat,
+    #p2 .sec-head h2 .lat,
+    #p3 .sec-head h2 .lat {
+      color: #6b6288;
+    }
+
+    .idea-body {
+      max-width: 680px;
+    }
+
+    .idea-body p b {
+      color: var(--lan-deep);
+      font-weight: 600;
+    }
+
+    .idea-body p {
+      margin: 0 0 18px;
+      font-size: 16.5px;
+      line-height: 2.05;
+      color: #3c4249;
+      text-indent: 2em;
+      text-align: justify;
+      text-justify: inter-ideograph;
+    }
+
+    .idea-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .idea-body .lead-line {
+      text-indent: 0;
+      font-family: "Noto Sans SC", sans-serif;
+      font-size: 16.5px;
+      color: #3c4249;
+      font-weight: 600;
+      line-height: 1.9;
+      margin-bottom: 16px;
+    }
+
+    .idea-body .closing-line {
+      text-indent: 0;
+      margin-top: 52px;
+      padding: 18px 24px;
+      border-radius: var(--r-sm);
+      background: rgba(255, 255, 255, .78);
+      border-left: 3px solid #8d84ab;
+      font-size: 16.5px;
+      color: #3c4249;
+      line-height: 1.95;
+      font-weight: 600;
+    }
+
+    /* ── 课堂实例 ── */
+
+    /* ── 我们的课堂 ── */
+
+    /* ── 收尾三词 ── */
+    .triad-cta {
+      margin-top: 34px;
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-ghost-light {
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, .45);
+    }
+
+    .btn-ghost-light:hover {
+      background: rgba(255, 255, 255, .12);
+    }
+
+    @media (max-width: 860px) {
+      .idea {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .idea-pics {
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .idea-pics .idea-pic {
+        flex: 1 1 260px;
+        max-width: 420px;
+      }
+
+      .idea-pic {
+        position: static;
+        max-width: 420px;
+      }
+
+      .idea-pic img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4/3;
+      }
+
+      .opening {
+        font-size: 16.5px;
+        padding-left: 18px;
+      }
+    }
+
+    /* ── 开篇：文字压在帆船插画上 ── */
+    .op-hero .wrap {
+      padding-top: 26px;
+      padding-bottom: 26px;
+    }
+
+    /* 压暗层：保证白字对比度，同时不遮住帆船 */
+    @media (max-width:760px) {}
+
+    /* ── 开篇：植物标识 + 文字，无底图 ── */
+    section.op-hero.tight {
+      padding: 20px 0 16px;
+    }
+
+    .op-plain {
+      display: flex;
+      justify-content: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .op-plain .opening {
+      text-align: center;
+      max-width: none;
+      padding: 0;
+    }
+
+    .op-plain .op-cite p.op-quote {
+      color: var(--qing);
+      text-shadow: none;
+      font-size: clamp(15px, 1.75vw, 20px);
+      font-weight: 500;
+      letter-spacing: .05em;
+      margin: 0;
+    }
+
+    .op-plain .op-triad {
+      justify-content: center;
+      margin: 0 !important;
+    }
+
+    .op-plain .op-triad span {
+      color: #5b42bd !important;
+      text-shadow: none;
+      font-size: clamp(22px, 2.9vw, 34px) !important;
+      letter-spacing: .14em !important;
+    }
+
+    .op-plain .op-triad i {
+      color: #9a8fc4 !important;
+      font-size: clamp(13px, 1.6vw, 18px) !important;
+    }
+
+    @media (max-width:700px) {
+      section.op-hero.tight {
+        padding: 14px 0 12px;
+      }
+    }
+
+    .idea-triad {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(12px, 2vw, 22px);
+      margin: 30px 0 0 !important;
+      flex-wrap: wrap;
+      text-indent: 0;
+    }
+
+    /* 引文 + 出处：出处右对齐到引文右缘 */
+    .op-cite {
+      display: inline-block;
+      margin: 0;
+      text-align: left;
+    }
+
+    .op-plain .op-src {
+      display: block;
+      margin: 8px 0 0;
+      text-align: right;
+      font-family: "Noto Serif SC", serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: clamp(12px, 1.3vw, 14px);
+      letter-spacing: .12em;
+      color: var(--qing-ink);
+      opacity: .86;
+    }
+
+    .op-hero>.wrap {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    /* 开篇引文：上下细线 + 大留白 */
+    section.op-hero {
+      padding: 74px 0 68px !important;
+    }
+
+    .op-hero .op-plain {
+      position: relative;
+      padding: 34px 0;
+    }
+
+    .op-hero .op-plain::before,
+    .op-hero .op-plain::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: clamp(120px, 22vw, 220px);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--qing-light), transparent);
+    }
+
+    .op-hero .op-plain::before {
+      top: 0;
+    }
+
+    .op-hero .op-plain::after {
+      bottom: 0;
+    }
+
+    .op-hero .op-plain .op-cite p.op-quote {
+      font-family: "Noto Serif SC", serif !important;
+      font-size: clamp(20px, 2.5vw, 29px) !important;
+      font-weight: 500;
+      color: var(--qing-ink) !important;
+      letter-spacing: .08em;
+      line-height: 1.75;
+    }
+
+    .op-hero .op-src {
+      margin-top: 14px !important;
+    }
+
+    /* 引文之后：三词 + 一句话 */
+    .op-path {
+      margin: 28px 0 0;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(10px, 1.7vw, 17px);
+    }
+
+    .op-path .w {
+      font-family: "Noto Serif SC", serif;
+      font-weight: 600;
+      font-size: clamp(17px, 2vw, 22px);
+      color: var(--mauve-mid);
+      letter-spacing: .14em;
+    }
+
+    .op-path>i {
+      font-style: normal;
+      color: #5b42bd;
+      margin: 0;
+      font-size: clamp(11px, 1.3vw, 14px);
+    }
+
+    .op-path em {
+      flex: 0 0 100%;
+      margin-top: 10px;
+      font-style: normal;
+      font-family: "Noto Serif SC", serif;
+      font-size: clamp(15px, 1.7vw, 18px);
+      color: var(--muted);
+      letter-spacing: .04em;
+      line-height: 1.9;
+    }
+
+    .op-path em {
+      color: var(--qing-ink) !important;
+    }
+
+    .op-path em::before {
+      content: "——";
+      margin-right: .35em;
+      color: var(--line);
+      letter-spacing: 0;
+    }
+
+    section.op-hero {
+      padding: 44px 0 40px !important;
+    }
+
+    .op-min {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .oc-quote {
+      margin: 0;
+      font-family: "Noto Serif SC", serif;
+      font-weight: 500;
+      font-size: clamp(20px, 2.5vw, 29px);
+      line-height: 1.6;
+      color: var(--lan-deep);
+      letter-spacing: .05em;
+    }
+
+    .oc-quote cite {
+      font-style: italic;
+      font-size: .46em;
+      color: var(--muted);
+      letter-spacing: .12em;
+      margin-left: .66em;
+      white-space: nowrap;
+    }
+
+    .oc-quote cite::before {
+      content: "——";
+      margin-right: .18em;
+      opacity: .5;
+    }
+
+    .oc-way {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0 10px;
+      margin: 16px 0 0;
+    }
+
+    .oc-way b {
+      font-family: "Noto Serif SC", serif;
+      font-weight: 600;
+      font-size: clamp(17px, 1.9vw, 21px);
+      letter-spacing: .13em;
+      color: #5b42bd;
+    }
+
+    .oc-way i {
+      font-style: normal;
+      color: #8578b4;
+      font-size: 12px;
+    }
+
+    .oc-way em {
+      font-style: normal;
+      font-family: "Noto Serif SC", serif;
+      font-size: 14px;
+      color: var(--muted);
+      letter-spacing: .02em;
+      margin-left: 6px;
+    }
+
+    .oc-way em::before {
+      content: "——";
+      opacity: .45;
+      margin-right: .3em;
+    }
+
+    @media (max-width:680px) {
+      .oc-way em {
+        flex: 0 0 100%;
+        margin: 8px 0 0;
+      }
+
+      .oc-way em::before {
+        display: none;
+      }
+    }
+
+    section.op-hero {
+      padding: 42px 0 38px !important;
+    }
+
+    .op3 {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .o3-quote {
+      margin: 0;
+      letter-spacing: .06em;
+      color: #3c4249;
+      line-height: 1.65;
+    }
+
+    .o3-quote cite {
+      font-style: normal;
+      font-size: .62em;
+      color: #4c5a68;
+      letter-spacing: .12em;
+      margin-left: .7em;
+      white-space: nowrap;
+      font-family: "Noto Serif SC", serif;
+      font-weight: 400;
+    }
+
+    .o3-quote cite::before {
+      content: "——";
+      margin-right: .2em;
+      opacity: .5;
+    }
+
+    .o3-band {
+      display: inline-block;
+      padding: 15px 34px 14px;
+      border-radius: var(--r-lg);
+      background: linear-gradient(140deg, rgba(91, 66, 189, .09), rgba(91, 66, 189, .15));
+    }
+
+    .o3-way {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(11px, 1.8vw, 18px);
+      margin: 20px 0 0;
+    }
+
+    .o3-way b {
+      font-family: "Noto Serif SC", serif;
+      font-weight: 600;
+      font-size: clamp(18px, 2.1vw, 23px);
+      letter-spacing: .14em;
+      color: #1c719f;
+    }
+
+    .o3-way i {
+      font-style: normal;
+      color: #3a80a8;
+      font-size: 12.5px;
+    }
+
+    .o3-note {
+      margin: 12px 0 0;
+      font-family: "Noto Serif SC", serif;
+      font-size: 16px;
+      color: #456a89;
+      letter-spacing: .03em;
+    }
+
+    .o3-note::before {
+      content: "——";
+      margin-right: .3em;
+      color: #8fb4cd;
+      letter-spacing: 0;
+    }
+
+    .o3-quote {
+      font-family: "Noto Serif SC", serif;
+      font-weight: 400;
+      font-size: clamp(15px, 1.6vw, 19px);
+    }
+
+    /* ── 开篇：竖排引文 + 竖线 + 右侧理念 ── */
+    section.op-hero {
+      padding: 48px 0 44px !important;
+    }
+
+    .op-vert {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(24px, 4vw, 44px);
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    /* 竖排引文 */
+    .ov-quote {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+      flex: none;
+      max-width: none;
+    }
+
+    .ov-quote p {
+      margin: 0;
+      font-family: "Noto Serif SC", serif;
+      font-weight: 400;
+      font-size: clamp(19px, 2.05vw, 23px);
+      letter-spacing: .06em;
+      color: #285a68;
+      line-height: 1.75;
+      text-align: right;
+    }
+
+    .ov-quote cite {
+      font-style: normal;
+      font-family: "Noto Serif SC", serif;
+      font-size: 17px;
+      color: #285a68;
+      letter-spacing: .1em;
+    }
+
+    .ov-quote cite::before {
+      content: "——";
+      margin-right: .24em;
+      opacity: .55;
+    }
+
+    /* 竖线 */
+    .ov-rule {
+      flex: none;
+      width: 1px;
+      height: 112px;
+      background: linear-gradient(180deg, transparent, #a9c4d6 16%, #a9c4d6 84%, transparent);
+    }
+
+    /* 右侧 */
+    .ov-right {
+      text-align: center;
+      flex: none;
+      padding: 18px clamp(24px, 3.4vw, 36px) 16px;
+      border-radius: var(--r-lg);
+      background: rgba(80, 70, 119, .055);
+    }
+
+    .ov-way {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(11px, 1.8vw, 18px);
+      margin: 0;
+    }
+
+    .ov-way b {
+      font-family: "Noto Serif SC", serif;
+      font-weight: 600;
+      font-size: clamp(18px, 1.95vw, 22px);
+      letter-spacing: .14em;
+      color: #285a68;
+    }
+
+    .ov-way i {
+      font-style: normal;
+      color: #285a68;
+      font-size: 14px;
+    }
+
+    .ov-note {
+      margin: 14px 0 0;
+      font-family: "Noto Serif SC", serif;
+      font-size: 14px;
+      color: #285a68;
+      letter-spacing: .03em;
+      line-height: 1.85;
+    }
+
+    .ov-note::before {
+      content: "——";
+      margin-right: .3em;
+      color: #285a68;
+      letter-spacing: 0;
+    }
+
+    /* 窄屏：转回横排 */
+    @media (max-width:700px) {
+      .op-vert {
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .ov-rule {
+        width: 72px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #a9c4d6, transparent);
+      }
+
+      .ov-quote {
+        align-items: center;
+        max-width: none;
+        gap: 8px;
+      }
+
+      .ov-quote p {
+        text-align: center;
+      }
+
+      .ov-quote p br {
+        display: none;
+      }
+
+      .ov-quote cite::before {
+        content: "——";
+        margin-right: .2em;
+        opacity: .5;
+      }
+
+      .ov-right {
+        text-align: center;
+      }
+
+      .ov-way {
+        justify-content: center;
+      }
+    }
+
+    /* 分隔点统一规格 */
+    #p1 .sec-head h2 .sep,
+    #p2 .sec-head h2 .sep,
+    #p3 .sec-head h2 .sep {
+      color: #5f7280 !important;
+      font-size: .62em;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body>
+  <a class="skip" href="#main">跳到主内容 · Zum Inhalt springen</a>
+
+  <header>
+    <div class="wrap nav-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="" class="brand-img" width="40" height="40">
+        <span class="brand-text">
+          <span class="cn" lang="zh-Hans">青蓝中文</span>
+          <span class="en">Qinglan Chinesisch</span>
+        </span>
+      </a>
+      <nav class="links" aria-label="Hauptnavigation">
+        <a href="about.html"><span lang="zh-Hans">关于我</span><span class="de">Über mich</span></a>
+        <a href="philosophy.html" class="current"><span lang="zh-Hans">理念</span><span class="de">Ansatz</span></a>
+        <a href="courses.html"><span lang="zh-Hans">课程</span><span class="de">Kurse</span></a>
+        <a href="contact.html"><span lang="zh-Hans">联系</span><span class="de">Kontakt</span></a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav"
+        aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobil">
+      <a href="about.html"><span lang="zh-Hans">关于我</span><span class="de">Über mich</span></a>
+      <a href="philosophy.html" aria-current="page"><span lang="zh-Hans">理念</span><span class="de">Ansatz</span></a>
+      <a href="courses.html"><span lang="zh-Hans">课程</span><span class="de">Kurse</span></a>
+      <a href="contact.html"><span lang="zh-Hans">联系</span><span class="de">Kontakt</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ══════ 引子 ══════ -->
+    <section class="op-hero">
+      <div class="wrap">
+        <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+          <defs>
+            <linearGradient id="lg-leaf-p" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0%" stop-color="#3f7d8a" />
+              <stop offset="52%" stop-color="#5c9aa4" />
+              <stop offset="100%" stop-color="#8fc0c4" />
+            </linearGradient>
+          </defs>
+        </svg>
+
+        <h1 class="sr-only" lang="zh-Hans">教学理念 · Unser Ansatz</h1>
+        <div class="op-vert">
+          <blockquote class="ov-quote">
+            <p lang="zh-Hans">青，取之于蓝，而青于蓝。</p>
+            <cite lang="zh-Hans">荀子</cite>
+          </blockquote>
+          <span class="ov-rule" aria-hidden="true"></span>
+          <div class="ov-right">
+            <p class="ov-way" lang="zh-Hans"><b>汲取</b><i>·</i><b>成长</b><i>·</i><b>超越</b></p>
+            <p class="ov-note" lang="zh-Hans">这是青蓝中文想陪伴孩子们走过的学习之路</p>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </section>
+
+
+    <!-- ══════ 一 · 汲取 ══════ -->
+    <section id="p1">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 lang="zh-Hans"><svg class="h2-leaf" viewBox="0 0 22 22" aria-hidden="true" focusable="false">
+              <path d="M2.4 19.6 Q2.4 7.6 19.6 2.4 Q19.6 14.4 2.4 19.6 Z" fill="url(#lg-leaf-p)" />
+              <path d="M2.4 19.6 Q10 12 19.6 2.4" fill="none" stroke="#fafbfd" stroke-width="1.05"
+                stroke-linecap="round" opacity=".62" />
+            </svg>学习从兴趣开始 <span class="sep" aria-hidden="true">·</span> <span lang="de" class="lat">Lernen beginnt mit
+              Interesse</span></h2>
+        </div>
+
+        <div class="idea">
+          <figure class="idea-pic">
+            <img src="images/classroom-2.jpg" alt="古诗穿绳：一边穿绳一边念，诗句在反复操作中记住" loading="lazy" width="1400" height="1050">
+            <figcaption lang="zh-Hans">古诗穿绳：一边穿绳一边念，诗句在反复操作中记住</figcaption>
+          </figure>
+          <div class="idea-body">
+            <p class="lead-line" lang="zh-Hans">
+              在非母语环境中学习母语，挑战不仅在于语言学习本身，还在于缺少持续的学习动力。
+            </p>
+            <p lang="zh-Hans">
+              如果德语连接着学校、朋友、游戏和生活，而中文却意味着背诵、作业和练习，那么学中文很容易变成一项沉重的负担。所以，我们首先要解决的，不只是「教什么」，还有如何让孩子愿意学下去。
+            </p>
+            <p lang="zh-Hans">
+              我们根据不同的学习内容和孩子的个体差异来进行教学设计，绘本故事、课堂游戏、角色扮演、可操作的教具，都是帮助孩子进入学习的方式。比如把《小壁虎借尾巴》《拔萝卜》改编成多角色短剧，孩子在表演和对话中自然掌握句型表达；古诗背诵有点枯燥，但如果和穿绳游戏结合，孩子会在不知不觉中熟悉诗句；拼音学习也可以融入系列探险故事……我们希望用这些设计，让中文学习变得生动起来。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════ 二 · 成长 ══════ -->
+    <section id="p2">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 lang="zh-Hans"><svg class="h2-leaf" viewBox="0 0 22 22" aria-hidden="true" focusable="false">
+              <path d="M2.4 19.6 Q2.4 7.6 19.6 2.4 Q19.6 14.4 2.4 19.6 Z" fill="url(#lg-leaf-p)" />
+              <path d="M2.4 19.6 Q10 12 19.6 2.4" fill="none" stroke="#fafbfd" stroke-width="1.05"
+                stroke-linecap="round" opacity=".62" />
+            </svg>和生活发生联系 <span class="sep" aria-hidden="true">·</span> <span lang="de" class="lat">Lernen mit dem Leben
+              verbinden</span></h2>
+        </div>
+
+        <div class="idea">
+          <figure class="idea-pic">
+            <img src="images/classroom-5.jpg" alt="种树游戏：按清单「买树」，「种树」后写上树名" loading="lazy" width="1400" height="1050">
+            <figcaption lang="zh-Hans">种树游戏：按清单「买树」，「种树」后写上树名</figcaption>
+          </figure>
+          <div class="idea-body">
+            <p class="lead-line" lang="zh-Hans">
+              课本不是学习的终点，而是进入真实世界的入口。中文只有与生活联结，在真实的情境中被使用，才真正有意义。
+            </p>
+            <p lang="zh-Hans">
+              虽然每周只有一次中文课，我们仍会尽可能将学习内容扩展到孩子的生活中去。比如学完《树之歌》，孩子们会带着词语清单去户外搜集树叶；学完故事《称赞》，他们会给其他小朋友写称赞卡并互相赠送。识字、阅读和写字，在这种具体情境中自然有了用武之地。
+            </p>
+            <p lang="zh-Hans">
+              这种联结还能从孩子身边的生活延伸到中国。在学《我多想去看看》时，孩子们不仅能观察中国地图，还可以思考和表达「我想去哪里看看」。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════ 三 · 超越 ══════ -->
+    <section id="p3">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 lang="zh-Hans"><svg class="h2-leaf" viewBox="0 0 22 22" aria-hidden="true" focusable="false">
+              <path d="M2.4 19.6 Q2.4 7.6 19.6 2.4 Q19.6 14.4 2.4 19.6 Z" fill="url(#lg-leaf-p)" />
+              <path d="M2.4 19.6 Q10 12 19.6 2.4" fill="none" stroke="#fafbfd" stroke-width="1.05"
+                stroke-linecap="round" opacity=".62" />
+            </svg>用中文去创造 <span class="sep" aria-hidden="true">·</span> <span lang="de" class="lat">Mit Chinesisch
+              gestalten</span></h2>
+        </div>
+
+        <div class="idea">
+          <div class="idea-pics">
+            <figure class="idea-pic">
+              <img src="images/classroom-3.jpg" alt="规划自己的旅行路线" loading="lazy" width="1400" height="1050">
+              <figcaption lang="zh-Hans">规划自己的旅行路线</figcaption>
+            </figure>
+            <figure class="idea-pic">
+              <img src="images/classroom-zongzi.jpg" alt="设计自己喜欢的粽子" loading="lazy" width="1400" height="1050">
+              <figcaption lang="zh-Hans">设计自己喜欢的粽子</figcaption>
+            </figure>
+          </div>
+          <div class="idea-body">
+            <p class="lead-line" lang="zh-Hans">
+              学中文不只是掌握「听说读写」，更是认识和创造世界的一种方式。
+            </p>
+            <p lang="zh-Hans">
+              「创造」可以发生在细微之处：讲一个自己的故事，设计一张卡片，写一篇日记，或者画一幅中文漫画。比如在学习《黄山奇石》《望庐山瀑布》单元时，除了学习课文，我们还会认识中国名山，再结合之前学过的交通工具主题，让孩子们规划自己的旅行路线。在学习《端午粽》时，孩子们可以发挥想象，设计自己独创的粽子，再介绍它的口味和馅料。
+            </p>
+            <p lang="zh-Hans">
+              随着年龄增长和中文能力的提升，他们会逐渐尝试更复杂的项目——设计海报、制作视频、编排短剧、开展主题活动……把不同阶段学到的语言知识融会贯通起来，进行自由的表达与创作。
+            </p>
+            <p class="closing-line" lang="zh-Hans">
+              当孩子开始用中文主动表达自己的想法、完成自己想做的事情时，语言才真正从书本上的知识，变成了属于他们自己的能力。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ══════ 收尾 ══════ -->
+    <section class="dark tight">
+      <div class="wrap">
+
+        <div class="triad-cta">
+          <a href="courses.html" class="btn btn-light">查看课程 · Kurse ansehen <span class="arr"
+              aria-hidden="true">→</span></a>
+          <a href="contact.html#form" class="btn btn-ghost-light">预约试听 · Probestunde anfragen</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <nav class="foot-line" aria-label="Fußzeile">
+        <a href="about.html"><span lang="zh-Hans">关于我</span> · Über mich</a>
+        <a href="philosophy.html"><span lang="zh-Hans">教学理念</span> · Ansatz</a>
+        <a href="courses.html"><span lang="zh-Hans">课程设置</span> · Kurse</a>
+        <a href="contact.html"><span lang="zh-Hans">联系</span> · Kontakt</a>
+        <a href="mailto:qinglankids@gmail.com">qinglankids@gmail.com</a>
+      </nav>
+      <div class="foot-bottom">
+        <div>© 2026 青蓝中文 · QINGLAN CHINESISCH · Berlin · Potsdam</div>
+        <div><a href="impressum.html">法律信息 Impressum</a> <a href="datenschutz.html">隐私声明 Datenschutz</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+
+    const tgl = document.getElementById('navToggle');
+    const mnav = document.getElementById('mobileNav');
+    tgl.addEventListener('click', () => {
+      const open = mnav.classList.toggle('open');
+      tgl.setAttribute('aria-expanded', String(open));
+      tgl.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && mnav.classList.contains('open')) { tgl.click(); tgl.focus(); }
+    });
+
+  </script>
+</body>
+
+</html>
