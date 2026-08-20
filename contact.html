@@ -290,7 +290,9 @@
       margin-left: 2px;
     }
 
-    .form-row input:invalid:not(:placeholder-shown) {
+    .form-row input:user-invalid,
+    select:user-invalid,
+    textarea:user-invalid {
       border-color: var(--seal);
     }
 
@@ -357,6 +359,22 @@
 
       .info-card {
         padding: 28px;
+      }
+    }
+  
+    /* ── 手机端联系页优化 ── */
+    @media (max-width: 700px) {
+      .info-row { grid-template-columns: 34px 1fr; gap: 12px; padding: 18px 0; }
+      .info-row .v { font-size: 15.5px; line-height: 1.55; }
+      .info-row .v span { display:inline-block; }
+      .info-row .v .wx-id { white-space: nowrap; }
+
+      .form-consent { grid-template-columns: 20px 1fr; gap: 10px; padding: 14px 15px; }
+      .form-consent label { font-size: 12.5px; line-height: 1.7; }
+      .form-consent label i {
+        margin-top: 9px; padding-top: 9px;
+        border-top: 1px solid var(--line-soft);
+        font-size: 11px; line-height: 1.6; color: var(--muted);
       }
     }
   </style>
@@ -435,9 +453,9 @@
                   </svg>
                 </span>
                 <div>
-                  <div class="k"><span lang="zh-Hans">微信</span> · WeChat</div>
+                  <div class="k"><span lang="zh-Hans">微信号</span> · WeChat</div>
                   <div class="v">
-                    <span lang="zh-Hans">搜索微信号 <b class="wx-id">QinglanCH</b> 添加</span>
+                    <b class="wx-id">QinglanCH</b>
                   </div>
                 </div>
               </div>

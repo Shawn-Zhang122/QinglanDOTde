@@ -390,7 +390,16 @@
       background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2336747d' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 5v13M6 13l6 6 6-6'/%3E%3C/svg%3E");
     }
     .way-list{ padding:6px 22px; }
-    .way-list li{ grid-template-columns:1fr; gap:5px; padding:14px 0; }
+      .way-list li{ grid-template-columns:1fr; gap:6px; padding:15px 0; }
+      /* 手机：小标题与内容拉开层级 */
+      .way-list li b{
+        font-size:15.5px !important; font-weight:600 !important;
+        letter-spacing:.03em; color:#205579 !important;
+      }
+      .way-list li span{
+        font-size:13.5px !important; line-height:1.75;
+        color:#5c6d7a !important;
+      }
   }
 
   /* 课程阶段表 */
@@ -608,19 +617,19 @@
           <div class="table-wrap">
           <table class="stages">
             <thead>
-              <tr><th>学年</th><th>对应教材</th><th>识字量</th><th>测验</th><th>说明</th></tr>
+              <tr><th>学年</th><th>对应教材</th><th>识字量</th><th>说明</th></tr>
             </thead>
             <tbody>
-              <tr><td>1</td><td>一年级上</td><td>约 280 字</td><td>无测验</td><td>第二学期学习拼音</td></tr>
-              <tr><td>2</td><td>一年级下</td><td>约 380 字</td><td>每学期一次</td><td></td></tr>
-              <tr><td>3</td><td>二年级上</td><td>约 420 字</td><td>每单元一次</td><td></td></tr>
-              <tr><td>4</td><td>二年级下</td><td>约 420 字</td><td>每单元一次</td><td></td></tr>
-              <tr><td>5</td><td>三年级上</td><td>约 300 字</td><td>每单元一次</td><td></td></tr>
-              <tr><td>6</td><td>三年级下</td><td>约 300 字</td><td>每单元一次</td><td></td></tr>
-              <tr><td>7</td><td>四年级上</td><td>约 250 字</td><td>每单元一次</td><td></td></tr>
-              <tr><td>8</td><td>四年级下</td><td>约 250 字</td><td>每单元一次</td><td></td></tr>
-              <tr><td>9</td><td>五年级</td><td>约 300 字</td><td>每单元一次</td><td>教材之外增加名著精读</td></tr>
-              <tr><td>10</td><td>六年级</td><td>约 100 字</td><td>每单元一次</td><td>以名著精读为主，教材为辅</td></tr>
+              <tr><td data-label="学年">1</td><td data-label="对应教材">一年级上</td><td data-label="识字量">约 280 字</td><td data-label="说明">第二学期学习拼音</td></tr>
+              <tr><td data-label="学年">2</td><td data-label="对应教材">一年级下</td><td data-label="识字量">约 380 字</td><td data-label="说明"></td></tr>
+              <tr><td data-label="学年">3</td><td data-label="对应教材">二年级上</td><td data-label="识字量">约 420 字</td><td data-label="说明"></td></tr>
+              <tr><td data-label="学年">4</td><td data-label="对应教材">二年级下</td><td data-label="识字量">约 420 字</td><td data-label="说明"></td></tr>
+              <tr><td data-label="学年">5</td><td data-label="对应教材">三年级上</td><td data-label="识字量">约 300 字</td><td data-label="说明"></td></tr>
+              <tr><td data-label="学年">6</td><td data-label="对应教材">三年级下</td><td data-label="识字量">约 300 字</td><td data-label="说明"></td></tr>
+              <tr><td data-label="学年">7</td><td data-label="对应教材">四年级上</td><td data-label="识字量">约 250 字</td><td data-label="说明"></td></tr>
+              <tr><td data-label="学年">8</td><td data-label="对应教材">四年级下</td><td data-label="识字量">约 250 字</td><td data-label="说明"></td></tr>
+              <tr><td data-label="学年">9</td><td data-label="对应教材">五年级</td><td data-label="识字量">约 300 字</td><td data-label="说明">教材之外增加名著精读</td></tr>
+              <tr><td data-label="学年">10</td><td data-label="对应教材">六年级</td><td data-label="识字量">约 100 字</td><td data-label="说明">以名著精读为主，教材为辅</td></tr>
             </tbody>
             <tfoot>
               <tr><td colspan="2">累计</td><td>约 3 000 字</td><td colspan="2"></td></tr>

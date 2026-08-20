@@ -481,10 +481,12 @@ section.dark h2, section.dark h3{ color:#fff; }
   .news-pic{ grid-column:1 / -1; margin-top:8px; }
 }
 @media (max-width:760px){
-  .news{ padding:6px 26px; }
-  .news li{ grid-template-columns:1fr; gap:10px; padding:24px 0; }
+  .news{ padding:6px 20px; }
+  .news li{ grid-template-columns:minmax(0,1fr); gap:10px; padding:24px 0; }
   .news time{ font-size:13px; }
-
+  .news-pic{ width:100%; max-width:340px; margin:4px auto 0; }
+  .news-pic img{ width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; }
+  .news-pic figcaption{ text-align:center; }
 }
 
 /* ---------- 卡片 ---------- */
@@ -632,7 +634,8 @@ footer{ background:#0b1d2e; color:#abb8c4; padding:22px 0 18px; }  /* 用 logo-l
   .hero{ min-height:min(76vh,520px); padding:48px 0 148px; }
   .facts-row > div{ padding-right:18px; margin-right:18px; }
   .brand-img{ height:38px; }
-  .brand .en{ display:none; }
+  .brand .cn{ font-size:19px; letter-spacing:.2em; margin-right:-.2em; }
+  .brand .en{ font-size:8.2px; letter-spacing:-.147px; margin-top:3px; }
 }
 
 /* ---------- 地图卡片（contact） ---------- */
@@ -771,9 +774,28 @@ a.map-placeholder small{ color:var(--qing-ink); font-family:"Newsreader",serif; 
 }
 .hero .btn-primary .arr{ color:#fff; }
 .hero .btn-primary .arr{ color:var(--lan-deep); }
+.hero-de .de-br{ display:none; }
 @media (max-width:760px){
-  .hero{ min-height:min(76vh,520px); padding:48px 0 148px; }
+  .hero-de .de-br{ display:inline; }
+  .hero{ min-height:min(72vh,500px); padding:44px 0 130px; }
   .hero .facts{ padding:14px 22px 12px; }
+  /* 背景：把插画主体（人物）留在画面里 */
+  .hero-bg{ background-position:38% 62% !important; }
+  /* 德语说明：收字距 + 缩字号，压成一行 */
+  .hero .hero-de{
+    font-size:11.5px !important; letter-spacing:.02em !important;
+    line-height:1.9; max-width:none; padding:0 12px;
+  }
+  .hero .hero-de .de-sep{ display:none; }
+  /* 按钮：不撑满 */
+  .hero .btn-primary{
+    padding:13px 26px; font-size:14.5px; letter-spacing:.03em;
+  }
+  .hero .cta-row{ justify-content:center; }
+}
+@media (max-width:420px){
+  .hero .hero-de{ font-size:11px !important; padding:0 8px; }
+  .hero .btn-primary{ padding:12px 20px; font-size:13.5px; }
 }
 
 /* 锚点跳转：避开固定顶栏，标题不贴边 */
@@ -846,3 +868,88 @@ main h1{ font-size:var(--fs-page); font-weight:600; color:var(--lan-deep); }
 .foot-line a{ color:#9db0c0; text-decoration:none; }
 .foot-line a:hover{ color:var(--qing-light); }
 .foot-line a:last-child{ font-family:"Newsreader",serif; letter-spacing:.02em; }
+
+/* 手机：区块标题的德语独占一行，不被拆断 */
+@media (max-width:600px){
+  .sec-head h2{ line-height:1.35; }
+  .sec-head h2 .sep{ display:none; }
+  .sec-head h2 .lat{
+    display:block; margin-left:0; margin-top:3px;
+    font-size:.6em; letter-spacing:.01em;
+  }
+}
+
+/* 表格：课程名、时间、状态不折断 */
+.termine td.kurs, .termine td .tm, .termine .st{ white-space:nowrap; }
+@media (max-width:760px){
+  .termine{ font-size:14px; }
+  .termine td.kurs{ font-size:13.5px; }
+}
+
+/* 课程体系表：手机上转为卡片式 */
+@media (max-width:700px){
+  .stages{ min-width:0 !important; width:100%; display:block; font-size:14px; }
+  .stages thead{ display:none; }
+  .stages tbody{ display:block; }
+  .stages tr{
+    display:block; margin:0 0 9px; padding:12px 15px 10px;
+    background:#fff; border:1px solid var(--line-soft);
+    border-radius:var(--r-sm);
+  }
+  .stages tr:last-child{ margin-bottom:0; }
+  .stages td{
+    display:flex; justify-content:space-between; align-items:baseline;
+    gap:14px; padding:3px 0; border:none; text-align:right;
+  }
+  .stages td::before{
+    content:attr(data-label); flex:none;
+    font-size:12px; color:var(--muted); letter-spacing:.02em;
+    font-family:"Noto Sans SC",sans-serif; text-align:left;
+  }
+  /* 学年 + 教材合成卡片标题行 */
+  .stages td:first-child{
+    display:inline-flex; width:auto; padding:0;
+    font-family:"Noto Serif SC",serif; font-weight:600;
+    font-size:15px; color:var(--lan-deep);
+  }
+  .stages td:first-child::before{ display:none; }
+  .stages td:first-child::after{
+    content:"·"; margin:0 7px; color:var(--line); font-weight:400;
+  }
+  .stages td:nth-child(2){
+    display:inline-flex; width:auto; padding:0 0 9px;
+    font-family:"Noto Serif SC",serif; font-weight:600;
+    font-size:15px; color:var(--lan-deep);
+  }
+  .stages td:nth-child(2)::before{ display:none; }
+  /* 标题行下的分隔线 */
+  .stages td:nth-child(3){
+    margin-top:0; padding-top:9px;
+    border-top:1px solid var(--line-soft);
+  }
+  .stages td:empty{ display:none; }
+  /* 外层容器：去框、取消限高（卡片直接跟着页面滚）*/
+  .stages-wrap, .table-wrap:has(.stages){
+    border:none !important; box-shadow:none !important;
+    background:transparent !important; padding:0 !important;
+    max-height:none !important; overflow:visible !important;
+  }
+}
+
+/* 手机：按钮文字不折行，德语随宽度缩放 */
+@media (max-width:700px){
+  .btn, .btn-primary, .btn-light, .btn-ghost-light{
+    white-space:nowrap; font-size:13.5px; padding:13px 20px; gap:8px;
+  }
+  .btn .arr, .btn-primary .arr, .btn-light .arr, .btn-ghost-light .arr{ margin-left:2px; }
+}
+@media (max-width:400px){
+  .btn, .btn-primary, .btn-light, .btn-ghost-light{
+    font-size:12.5px; padding:12px 16px; letter-spacing:0;
+  }
+  .news-cta{ font-size:12.5px; letter-spacing:0; }
+  .bio-link a.more, .more{ font-size:12.5px; letter-spacing:0; white-space:nowrap; }
+}
+@media (max-width:700px){
+  .news-cta{ white-space:nowrap; font-size:13px; }
+}
