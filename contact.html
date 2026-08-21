@@ -139,12 +139,6 @@
     }
 
     /* 表单：中德双行标签 */
-    .form-intro {
-      margin: 0 0 26px;
-      font-size: 15px;
-      line-height: 1.9;
-      color: #3c4249;
-    }
 
     .form-row label i {
       font-family: "Newsreader", serif;
@@ -377,6 +371,44 @@
         font-size: 11px; line-height: 1.6; color: var(--muted);
       }
     }
+      .sr-only{
+      position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+      overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0;
+    }
+  
+    /* 手机：联系卡收紧，防溢出 */
+    @media (max-width:700px){
+      /* 去掉外层白卡，只留内层 info-card */
+      .contact-grid{
+        gap:26px; background:transparent !important;
+        padding:0 !important; border:none !important;
+        box-shadow:none !important; border-radius:0 !important;
+      }
+      .info-card{ padding:22px 20px !important; }
+      .info-row{ grid-template-columns:30px 1fr !important; gap:11px !important; }
+      .info-row .v{ font-size:15px !important; word-break:break-all; }
+      .info-row .k{ font-size:12.5px !important; }
+      .write-pane h2 .en{ font-size:12.5px !important; letter-spacing:.06em !important; }
+    }
+  
+    /* iOS Safari：表单控件字号 <16px 会被强制放大并触发页面缩放
+       统一 16px，靠 padding 和 line-height 控制视觉大小 */
+    @media (max-width:700px){
+      #anfrage input,
+      #anfrage select,
+      #anfrage textarea{
+        font-size:16px !important;
+        padding:11px 14px !important;
+        line-height:1.4;
+      }
+      #anfrage select{
+        padding-right:36px !important;
+        background-size:11px auto;
+      }
+      #anfrage textarea{ padding:12px 14px !important; }
+      #anfrage label,
+      #anfrage .lbl{ font-size:13.5px !important; }
+    }
   </style>
   <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -414,11 +446,7 @@
 
   <main id="main">
 
-    <div class="page-head">
-      <div class="wrap">
-        <h1>联系 <span class="sep">·</span> Kontakt</h1>
-      </div>
-    </div>
+    <h1 class="sr-only">联系 · Kontakt</h1>
 
     <section>
       <div class="wrap">
@@ -466,12 +494,9 @@
             </div>
           </aside>
 
-          <!-- 右：申请试听表单 -->
+          <!-- 右：预约试听表单 -->
           <div class="write-pane" id="form">
-            <h2 lang="zh-Hans">申请试听 <span class="en">Probestunde anfragen</span></h2>
-            <p class="form-intro" lang="zh-Hans">
-              想了解课程或申请试听？欢迎留言。
-            </p>
+            <h2 lang="zh-Hans">咨询 / 预约 <span class="en">Anfragen</span></h2>
 
             <!-- ⚠ 上线前必做：把 action 换成表单服务地址（Formspree / Web3Forms） -->
             <form id="anfrage" action="https://api.web3forms.com/submit" method="POST" novalidate>
@@ -528,7 +553,7 @@
 
               <div class="form-row">
                 <label for="msg"><span lang="zh-Hans">留言</span><i>Nachricht</i></label>
-                <textarea id="msg" name="Nachricht" placeholder="例如：申请试听、课程咨询、正式报名，或其他想了解的问题。"
+                <textarea id="msg" name="Nachricht" placeholder="例如：预约试听、课程咨询、正式报名，或其他想了解的问题。"
                   autocomplete="off"></textarea>
               </div>
 
